@@ -1,0 +1,30 @@
+{
+  "name": "test1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "codeceptjs": "codeceptjs init",
+    "codeceptjs:gherkin": "codeceptjs gherkin:init",
+    "test": "codeceptjs run --grep '@basic' --reporter mochawesome >./log/server.log",
+    "test:allure": "codeceptjs run --grep '@basic' --plugins allure >./log/server.log",
+    "allure": "allure serve report",
+    "format": "prettier --write src/**/*.js",
+    "gherkin:lint": "node ./node_modules/gherkin-lint/dist/main.js -c ./.gherkin-lintrc.json ./src/features/**"
+  },
+  "keywords": [],
+  "author": "H0h4mmed Estrada",
+  "license": "ISC",
+  "dependencies": {
+    "@wdio/selenium-standalone-service": "^5.16.10",
+    "codeceptjs": "^2.3.6",
+    "mocha": "^6.2.2",
+    "mochawesome": "^4.1.0",
+    "protractor": "^5.4.2"
+  },
+  "devDependencies": {
+    "gherkin": "^9.0.0",
+    "gherkin-lint": "^3.3.10",
+    "prettier": "^1.19.1"
+  }
+}
