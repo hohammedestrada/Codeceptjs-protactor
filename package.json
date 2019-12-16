@@ -8,11 +8,12 @@
     "codeceptjs:gherkin": "codeceptjs gherkin:init",
     "test": "codeceptjs run --grep '@basic' --reporter mochawesome >./log/server.log",
     "test:allure": "codeceptjs run --grep '@basic' --plugins allure >./log/server.log",
-    "test:allure:debug" :"codeceptjs run --grep '@basic' --debug -p allure >./log/server.log",
+    "test:allure:debug": "codeceptjs run --grep '@basic' --debug -p allure >./log/server.log",
     "test:multiple:basic": "codeceptjs run-multiple basic --grep '@basic' --reporter mochawesome >./log/server.log",
     "test:multiple:smoke": "codeceptjs run-multiple smoke --reporter mochawesome >./log/server.log",
     "allure": "allure serve report",
     "format": "prettier --write src/**/*.js",
+    "lint": "eslint . --fix",
     "gherkin:lint": "node ./node_modules/gherkin-lint/dist/main.js -c ./.gherkin-lintrc.json ./src/features/**"
   },
   "keywords": [],
@@ -26,6 +27,8 @@
     "protractor": "^5.4.2"
   },
   "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-plugin-codeceptjs": "^1.2.0",
     "gherkin": "^9.0.0",
     "gherkin-lint": "^3.3.10",
     "prettier": "^1.19.1"
