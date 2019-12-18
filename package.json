@@ -13,8 +13,13 @@
     "test:multiple:smoke": "codeceptjs run-multiple smoke --reporter mochawesome >./log/server.log",
     "allure": "allure serve report",
     "format": "prettier --write src/**/*.js",
-    "lint": "eslint . --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "gherkin:lint": "node ./node_modules/gherkin-lint/dist/main.js -c ./.gherkin-lintrc.json ./src/features/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hohammedestrada/Codeceptjs-protactor.git"
   },
   "keywords": [],
   "author": "H0h4mmed Estrada",

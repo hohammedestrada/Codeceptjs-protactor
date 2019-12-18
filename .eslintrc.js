@@ -3,7 +3,6 @@ module.exports = {
         'browser': true,
         'es6': true,
         'node': true,
-        'codeceptjs/codeceptjs': true
     },
     'extends': ['plugin:codeceptjs/recommended', 'eslint:recommended'],
     'parserOptions': {
@@ -28,7 +27,9 @@ module.exports = {
             'always'
         ],
         'no-control-regex': 0,
-        //'codeceptjs/no-actor-in-scenario': 2,
-        //'no-pause-in-scenario': 2
+        'codeceptjs/no-actor-in-scenario': 1,
+        'codeceptjs/no-exclusive-tests':1,
+        'codeceptjs/no-skipped-tests':1, 
+        'codeceptjs/no-pause-in-scenario': 1
     }
 };
