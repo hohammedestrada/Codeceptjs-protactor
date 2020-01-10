@@ -2,9 +2,9 @@ const fs = require('fs');
 
 function fnGetFiles(dir, filter = '', files_) {
 	files_ = files_ || [];
-	var files = fs.readdirSync(dir);
-	for (var i in files) {
-		var name = dir + '/' + files[i];
+	const files = fs.readdirSync(dir);
+	for (let i in files) {
+		let name = dir + '/' + files[i];
 		if (fs.statSync(name).isDirectory()) {
 			fnGetFiles(name, filter, files_);
 		} else if (name.indexOf(filter) >= 0) {
@@ -14,4 +14,6 @@ function fnGetFiles(dir, filter = '', files_) {
 	return files_;
 }
 
-module.exports.fnGetFiles = fnGetFiles;
+module.exports = {
+	fnGetFiles,
+};

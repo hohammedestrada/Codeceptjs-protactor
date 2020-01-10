@@ -51,8 +51,8 @@ exports.config = {
 	multiple: {
 		basic: {
 			// run all tests in chrome and firefox
-			browsers: ['chrome', 'firefox']
-		},  
+			browsers: ['chrome', 'safari', 'firefox']
+		},
 		smoke:{
 			grep: '@basic',
 			outputName: 'smoke',

@@ -6,3 +6,5 @@ Feature: Business rules
 
 Scenario: do something
   Given I have a defined step
+  When  I select de second item
+  Then  I delete item
