@@ -5,4 +5,4 @@ Feature: Business rules advanced
   I want to be able to interact with a system
 
 Scenario: do something advanced
-  Given I have a defined step2
+  Given I have a defined step2gi

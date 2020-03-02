@@ -5,7 +5,7 @@ exports.config = {
 	output: 'report',
 	helpers: {
 		Protractor: {
-			url: 'http://todomvc.com/examples/angularjs/',
+			url: 'https://sbappqa.somosbelcorp.com/',
 			driver: 'hosted',
 			browser: 'chrome',
 			capabilities: {
@@ -14,8 +14,8 @@ exports.config = {
 				}
 			},
 			rootElement: 'body',
-			windowSize:  'maximize'
-			//angular: false
+			windowSize:  'maximize',
+			angular: false
 		},
 		Mochawesome:{
 			uniqueScreenshotNames:true
