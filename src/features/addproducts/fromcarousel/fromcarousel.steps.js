@@ -1,15 +1,17 @@
 const mModule = require('./fromcarousel.module');
 
-/* eslint-disable */
-Given('I logged in', () => {
-  mModule.iloggedIn();
+let logInModule = require('../../includes/login/login.module');
+
+Given('I logged in with params {string}, {string} and {string}', (country, user, password) => {
+  logInModule.definedSteps(country, user, password);
+  logInModule.clickButton();
+  logInModule.loginSystem();
 });
 
 When('I click on agregar button', () => {
-  mModule.clickButton();
+  mModule.addButton();
 });
 
 Then('I see the product detail', () => {
-  mModule.loginSystem();
+  mModule.iseeProductDetail();
 });
-/* eslint-enable */

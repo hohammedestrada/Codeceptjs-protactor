@@ -1,9 +1,12 @@
-const mModule = require('./login.module');
+const mModule = require('../includes/login/login.module');
+const logoutModule = require('../includes/logout/logout.module');
 
-/* eslint-disable */
-Given('I have a defined step', () => {
-  mModule.definedSteps();
-});
+Given(
+  'I select my {string} and put my {string} and my {string}',
+  (country, user, password) => {
+    mModule.definedSteps(country, user, password);
+  }
+);
 
 When('I click on ingresar a tu cuenta', () => {
   mModule.clickButton();
@@ -12,4 +15,8 @@ When('I click on ingresar a tu cuenta', () => {
 Then('I login on system', () => {
   mModule.loginSystem();
 });
-/* eslint-enable */
+
+Then('I logout on system', () => {
+  logoutModule.doLogout();
+  logoutModule.verifyLogout();
+});

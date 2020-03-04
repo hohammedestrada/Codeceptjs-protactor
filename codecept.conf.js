@@ -5,7 +5,7 @@ exports.config = {
 	output: 'report',
 	helpers: {
 		Protractor: {
-			url: 'https://sbappqa.somosbelcorp.com/',
+			url: 'https://sbappqa.somosbelcorp.com',
 			driver: 'hosted',
 			browser: 'chrome',
 			capabilities: {
@@ -69,5 +69,6 @@ exports.config = {
 		}
 	},
 	tests: './*_test.js',
+	timeou: 10000,
 	name: 'SomosBelcorp3.0'
 };
