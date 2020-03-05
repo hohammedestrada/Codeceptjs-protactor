@@ -1,13 +1,17 @@
+const scenario = require('../../../utils/automationUtil');
+const automationUtil = require('../../../utils/automationUtil');
+
 const I = actor();
 const locator = require('./logout.locator').locator;
-let wait = { retries: 3, minTimeout: 2000 };
 
 module.exports = {
   doLogout() {
 	  I.wait(1);
-  	I.click(locator.logoutLink);
+  	I.retry(automationUtil.wait).click(locator.logoutLink());
   },
   verifyLogout(){
-    I.wait(10);
+    I.retry(automationUtil.wait).seeElement(locator.selectCountry);
+    I.retry(automationUtil.wait).seeElement(locator.inputUserCode);
+    I.retry(automationUtil.wait).seeElement(locator.inputUserPassword);
   }
 };

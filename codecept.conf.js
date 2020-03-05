@@ -1,9 +1,13 @@
-const utils= require('./src/utils/utils');
-let steps = utils.fnGetFiles('./src/features', '.steps.js');
+const utils= require('./src/utils/automationUtil');
+let steps = utils.fnGetFiles('./src/features', '.steps.js', utils.fnGetFiles('./src/features', '.steps.ts'));
 
 exports.config = {
 	output: 'report',
+	require: ["ts-node/register"],
 	helpers: {
+		AutomationHelper: {
+			require: './src/utils/AutomationHelper.js' // Import the custom helper file
+		},
 		Protractor: {
 			url: 'https://sbappqa.somosbelcorp.com',
 			driver: 'hosted',
@@ -68,7 +72,7 @@ exports.config = {
 			]
 		}
 	},
-	tests: './*_test.js',
-	timeou: 10000,
+	tests: './tests/*.spec.ts',
+	timeout: 10000,
 	name: 'SomosBelcorp3.0'
 };

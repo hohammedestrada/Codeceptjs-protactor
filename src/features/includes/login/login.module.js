@@ -1,28 +1,23 @@
+const automationUtil = require("../../../utils/automationUtil");
+
 const I = actor();
-let wait = { retries: 3, minTimeout: 2000 };
+const locator = require("./login.locator").locator;
 
 module.exports = {
   definedSteps(country, user, password) {
     I.amOnPage('/');
 	  I.wait(1);
-  	I.selectOption('#ddlPais',country);
-    I.fillField('CodigoUsuario', user);
-    I.fillField('#txtContrasenia', password);
+  	I.selectOption(locator.selectCountry,country);
+    I.fillField(locator.inputUserCode, user);
+    I.fillField(locator.inputUserPassword, password);
   },
 
   clickButton() {
-    I.click('#btnLogin');
+    I.click(locator.btnLogin);
   },
 
   loginSystem() {
-    I.wait(1);
-    I.retry(wait).see('Espere un momento');
-    I.retry(wait).see('Inicio');
-  },
-
-  addImage(fileName, someText) {
-    I.retry(wait).saveScreenshot(fileName + '.png');
-    I.addMochawesomeContext(someText);
-    I.addMochawesomeContext(fileName + '.png');
-  },
+    I.retry(automationUtil.wait).see('Espere un momento');
+    I.retry(automationUtil.wait).see('Inicio');
+  }
 };

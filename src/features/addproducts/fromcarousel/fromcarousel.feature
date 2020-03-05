@@ -7,7 +7,8 @@ Feature: Agregar item a carrito
 Scenario Outline: add products from carousel
   Given I logged in with params "<country>", "<user>" and "<password>"
   When  I click on agregar button
-  Then  I see the product detail
+  Then  I see add product confirmation
+  And   I logout on system
 
 Examples:
   | country | user | password |

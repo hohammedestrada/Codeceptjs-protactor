@@ -1,5 +1,5 @@
-@ignore
-Feature: Business rules
+@basic
+Feature: Doing Login
   In order to achieve my goals
   As a persona
   I want to be able to log in system

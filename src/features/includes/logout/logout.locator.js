@@ -1,11 +1,14 @@
+let loginLocator = require('../login/login.locator').locator;
+
 const config = {
     locator: {
       logoutLink: () => {
-        return `a[ng-reflect-router-link="/signout"]`;
-      },
-      inputCountry : "",
-      inputUserCode : "",
-      inputUserPassword: ""
+        return locate('a')
+        .withAttr({ href: '/signout' });
+      },	
+      selectCountry : loginLocator.selectCountry,
+      inputUserCode : loginLocator.inputUserCode,
+      inputUserPassword: loginLocator.inputUserPassword
     },
   };
   
