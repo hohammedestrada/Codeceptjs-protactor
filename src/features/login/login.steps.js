@@ -1,6 +1,6 @@
 const ConstUtil = require('../../utils/ConstUtil');
-const mModule = require('../includes/login/login.module');
-const logoutModule = require('../includes/logout/logout.module');
+const mModule = require('../includes/login/LoginModule');
+const logoutModule = require('../includes/logout/LogoutModule');
 
 Given(
   'I select my {string} and put my {string} and my {string}',

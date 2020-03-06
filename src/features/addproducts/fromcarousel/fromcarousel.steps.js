@@ -1,7 +1,7 @@
 const ConstUtil = require('../../../utils/ConstUtil');
-const mModule = require('./fromcarousel.module');
-const logInModule = require('../../includes/login/login.module');
-const logoutModule = require('../../includes/logout/logout.module');
+const mModule = require('./FromcarouselModule');
+const logInModule = require('../../includes/login/LoginModule');
+const logoutModule = require('../../includes/logout/LogoutModule');
 
 Given('I logged in with params {string}, {string} and {string}', (country, user, password) => {
   logInModule.definedSteps(country, user, password);
@@ -13,7 +13,6 @@ Given('I logged in with params {string}, {string} and {string}', (country, user,
 When('I click on agregar button', () => {
   mModule.addButton();
   actor().saveScreenshotWithMocha(__filename,"click en agregar producto");
-
 });
 
 Then('I see add product confirmation', () => {

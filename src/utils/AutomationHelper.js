@@ -1,4 +1,4 @@
-const automationUtil = require("./automationUtil");
+const automationUtil = require("./AutomationUtil");
 const Helper = codeceptjs.helper;
 const path = require("path");
 

@@ -1,4 +1,5 @@
-const logoutMessage = "logout Correcto";
-module.exports = {
-    logoutMessage
+class ConstUtil {
+    static logoutMessage = "logout Correcto";
 }
+
+module.exports = ConstUtil;

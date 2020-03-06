@@ -1,9 +1,8 @@
-const utils= require('./src/utils/automationUtil');
+const utils = require('./src/utils/AutomationUtil');
 let steps = utils.fnGetFiles('./src/features', '.steps.js', utils.fnGetFiles('./src/features', '.steps.ts'));
 
 exports.config = {
 	output: 'report',
-	require: ["ts-node/register"],
 	helpers: {
 		AutomationHelper: {
 			require: './src/utils/AutomationHelper.js' // Import the custom helper file
@@ -72,7 +71,7 @@ exports.config = {
 			]
 		}
 	},
-	tests: './tests/*.spec.ts',
+	tests: './tests/*.spec.js',
 	timeout: 10000,
 	name: 'SomosBelcorp3.0'
 };
