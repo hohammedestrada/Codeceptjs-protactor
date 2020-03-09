@@ -1,18 +1,16 @@
-const scenario = require('../../../utils/AutomationUtil');
-const AutomationUtil = require('../../../utils/AutomationUtil');
-
-const I = actor();
 const locator = require('./LogoutLocator');
+const BaseModule = require('../../../base/BaseModule');
 
-class LogoutModule {
+class LogoutModule extends BaseModule.BaseModule {
+
   doLogout() {
-	  I.wait(1);
-  	I.retry(AutomationUtil.wait).click(locator.logoutLink);
+	  this.I.wait(1);
+  	this.I.retry(this.wait).click(locator.logoutLink);
   }
   verifyLogout(){
-    I.retry(AutomationUtil.wait).seeElement(locator.selectCountry);
-    I.retry(AutomationUtil.wait).seeElement(locator.inputUserCode);
-    I.retry(AutomationUtil.wait).seeElement(locator.inputUserPassword);
+    this.I.retry(this.wait).seeElement(locator.selectCountry);
+    this.I.retry(this.wait).seeElement(locator.inputUserCode);
+    this.I.retry(this.wait).seeElement(locator.inputUserPassword);
   }
 }
 

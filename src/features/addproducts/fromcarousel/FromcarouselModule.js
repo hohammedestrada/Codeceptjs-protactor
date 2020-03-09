@@ -1,16 +1,17 @@
-const AutomationUtil = require('../../../utils/AutomationUtil');
-const I = actor();
+const BaseModule = require('../../../base/BaseModule');
 const FromcarouselLocator = require('./FromcarouselLocator');
 
-class FromCarouselModule {
+class FromCarouselModule extends BaseModule.BaseModule {
+
   addButton() {
-	  I.click(FromcarouselLocator.btnAddCart(7));
+	  this.I.click(FromcarouselLocator.btnAddCart(7));
   }
   
   iSeeProductConfirmation() {
-    I.wait(1);
-    I.retry(AutomationUtil.wait).see('Producto añadido correctamente.');
+    this.I.wait(1);
+    this.I.retry(this.wait).see('Producto añadido correctamente.');
   }
+  
 }
 
 module.exports = new FromCarouselModule();

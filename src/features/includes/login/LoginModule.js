@@ -1,25 +1,24 @@
-const AutomationUtil = require("../../../utils/AutomationUtil");
+const BaseModule = require("../../../base/BaseModule");
 
-const I = actor();
 const locator = require("./LoginLocator");
 
-class LoginModule {
-  
+class LoginModule extends BaseModule.BaseModule {
+ 
   definedSteps(country, user, password) {
-    I.amOnPage('/');
-	  I.wait(1);
-  	I.selectOption(locator.selectCountry,country);
-    I.fillField(locator.inputUserCode, user);
-    I.fillField(locator.inputUserPassword, password);
+    this.I.amOnPage('/');
+	  this.I.wait(1);
+  	this.I.selectOption(locator.selectCountry,country);
+    this.I.fillField(locator.inputUserCode, user);
+    this.I.fillField(locator.inputUserPassword, password);
   }
 
   clickButton() {
-    I.click(locator.btnLogin);
+    this.I.click(locator.btnLogin);
   }
 
   loginSystem() {
-    I.retry(AutomationUtil.wait).see('Espere un momento');
-    I.retry(AutomationUtil.wait).see('Inicio');
+    this.I.retry(this.wait).see('Espere un momento');
+    this.I.retry(this.wait).see('Inicio');
   }
 
 }
