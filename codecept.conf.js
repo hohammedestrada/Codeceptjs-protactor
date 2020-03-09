@@ -1,5 +1,5 @@
 const utils = require('./src/utils/AutomationUtil');
-let steps = utils.fnGetFiles('./src/features', '.steps.js');
+let steps = utils.fnGetFiles('./src/features', '.steps.js', utils.fnGetFiles('./src/features', '.steps.ts'));
 
 exports.config = {
 	output: 'report',

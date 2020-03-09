@@ -3,12 +3,11 @@ const fs = require('fs');
 const codeceptjs = require("codeceptjs");
 
 class AutomationUtil {
-  
-  static wait() {
-    return { retries: 3, minTimeout: 2000 };
-  } 
+  constructor(){
+    this.wait = { retries: 3, minTimeout: 2000 };
+  }
 
-  static fnGetFiles(dir, filter = '', files_) {
+  fnGetFiles(dir, filter = '', files_) {
     files_ = files_ || [];
     const files = fs.readdirSync(dir);
     for (let i in files) {
@@ -22,7 +21,7 @@ class AutomationUtil {
     return files_;
   }
   
-  static saveScreenshotWithMocha(baseName,fileName) {
+  saveScreenshotWithMocha(baseName,fileName) {
     let scenario = path.basename(baseName);
     codeceptjs.actor().retry(wait).saveScreenshot(scenario+"-"+fileName + '.png');
     codeceptjs.actor().addMochawesomeContext(scenario+"-"+fileName);
@@ -30,4 +29,5 @@ class AutomationUtil {
   }
 }
 
-module.exports = AutomationUtil;
+module.exports = new AutomationUtil();
+module.exports.AutomationUtil = AutomationUtil;

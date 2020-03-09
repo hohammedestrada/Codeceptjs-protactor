@@ -1,16 +1,11 @@
 class LoginLocator {
-  static btnLogin() {
-    return "#btnLogin";
-  } 
-  static selectCountry() {
-    return locate('select').withAttr({id:"ddlPais"});
-  };
-  static inputUserCode() {
-    return "//input[@id = 'txtUsuario']";
-  } 
-  static inputUserPassword() {
-    return "#txtContrasenia";
+  constructor(){
+    this.btnLogin =  "#btnLogin";
+    this.selectCountry = locate('select').withAttr({id:"ddlPais"});
+    this.inputUserCode = "//input[@id = 'txtUsuario']";
+    this.inputUserPassword = "#txtContrasenia";
   }
 }
 
-module.exports = LoginLocator;
+module.exports = new LoginLocator();
+module.exports.LoginLocator = LoginLocator;

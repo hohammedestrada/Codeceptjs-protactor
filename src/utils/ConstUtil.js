@@ -1,7 +1,8 @@
 class ConstUtil {
-    static logoutMessage() {
-        return "logout Correcto";
-    } 
+    constructor(){
+        this.logoutMessage = "logout Correcto";
+    }
 }
 
-module.exports = ConstUtil;
+module.exports = new ConstUtil();
+module.exports.ConstUtil = ConstUtil;

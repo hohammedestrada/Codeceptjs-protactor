@@ -5,15 +5,16 @@ const I = actor();
 const locator = require('./LogoutLocator');
 
 class LogoutModule {
-  static doLogout() {
+  doLogout() {
 	  I.wait(1);
-  	I.retry(AutomationUtil.wait()).click(locator.logoutLink());
+  	I.retry(AutomationUtil.wait).click(locator.logoutLink);
   }
-  static verifyLogout(){
-    I.retry(AutomationUtil.wait()).seeElement(locator.selectCountry());
-    I.retry(AutomationUtil.wait()).seeElement(locator.inputUserCode());
-    I.retry(AutomationUtil.wait()).seeElement(locator.inputUserPassword());
+  verifyLogout(){
+    I.retry(AutomationUtil.wait).seeElement(locator.selectCountry);
+    I.retry(AutomationUtil.wait).seeElement(locator.inputUserCode);
+    I.retry(AutomationUtil.wait).seeElement(locator.inputUserPassword);
   }
 }
 
-module.exports = LogoutModule;
+module.exports = new LogoutModule();
+module.exports.LogoutModule = LogoutModule;
