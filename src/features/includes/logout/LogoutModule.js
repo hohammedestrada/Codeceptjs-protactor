@@ -7,12 +7,12 @@ const locator = require('./LogoutLocator');
 class LogoutModule {
   static doLogout() {
 	  I.wait(1);
-  	I.retry(AutomationUtil.wait()).click(locator.logoutLink);
+  	I.retry(AutomationUtil.wait()).click(locator.logoutLink());
   }
   static verifyLogout(){
-    I.retry(AutomationUtil.wait()).seeElement(locator.selectCountry);
-    I.retry(AutomationUtil.wait()).seeElement(locator.inputUserCode);
-    I.retry(AutomationUtil.wait()).seeElement(locator.inputUserPassword);
+    I.retry(AutomationUtil.wait()).seeElement(locator.selectCountry());
+    I.retry(AutomationUtil.wait()).seeElement(locator.inputUserCode());
+    I.retry(AutomationUtil.wait()).seeElement(locator.inputUserPassword());
   }
 }
 

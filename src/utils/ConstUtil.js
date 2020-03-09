@@ -1,5 +1,7 @@
 class ConstUtil {
-    static logoutMessage = "logout Correcto";
+    static logoutMessage() {
+        return "logout Correcto";
+    } 
 }
 
 module.exports = ConstUtil;

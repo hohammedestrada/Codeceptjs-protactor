@@ -1,8 +1,16 @@
 class LoginLocator {
-  static btnLogin = "#btnLogin";
-  static selectCountry = locate('select').withAttr({id:"ddlPais"});
-  static inputUserCode = "//input[@id = 'txtUsuario']";
-  static inputUserPassword = "#txtContrasenia";
+  static btnLogin() {
+    return "#btnLogin";
+  } 
+  static selectCountry() {
+    return locate('select').withAttr({id:"ddlPais"});
+  };
+  static inputUserCode() {
+    return "//input[@id = 'txtUsuario']";
+  } 
+  static inputUserPassword() {
+    return "#txtContrasenia";
+  }
 }
 
 module.exports = LoginLocator;

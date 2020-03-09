@@ -8,13 +8,13 @@ class LoginModule {
   static definedSteps(country, user, password) {
     I.amOnPage('/');
 	  I.wait(1);
-  	I.selectOption(locator.selectCountry,country);
-    I.fillField(locator.inputUserCode, user);
-    I.fillField(locator.inputUserPassword, password);
+  	I.selectOption(locator.selectCountry(),country);
+    I.fillField(locator.inputUserCode(), user);
+    I.fillField(locator.inputUserPassword(), password);
   }
 
   static clickButton() {
-    I.click(locator.btnLogin);
+    I.click(locator.btnLogin());
   }
 
   static loginSystem() {

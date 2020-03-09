@@ -23,5 +23,5 @@ Then('I login on system', () => {
 Then('I logout on system', () => {
   logoutModule.doLogout();
   logoutModule.verifyLogout();
-  actor().saveScreenshotWithMocha(__filename,ConstUtil.logoutMessage);
+  actor().saveScreenshotWithMocha(__filename,ConstUtil.logoutMessage());
 });
