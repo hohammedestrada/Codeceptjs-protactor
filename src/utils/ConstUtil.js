@@ -1,6 +1,8 @@
 class ConstUtil {
     constructor(){
-        this.logoutMessage = "logout Correcto";
+        this.LOGOUT_MESSAGE = "Logout correcto";
+        this.WAIT_A_MOMMENT = "Espere un momento";
+        this.WAITING_TIME = 7;
     }
 }
 

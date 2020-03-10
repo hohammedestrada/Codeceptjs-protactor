@@ -1,4 +1,4 @@
-@basic
+@addproducts
 Feature: Agregar item a carrito
   In order to achieve my goals
   As a persona

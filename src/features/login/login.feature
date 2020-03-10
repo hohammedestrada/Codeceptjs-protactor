@@ -1,4 +1,4 @@
-@basic
+@login
 Feature: Doing Login
   In order to achieve my goals
   As a persona

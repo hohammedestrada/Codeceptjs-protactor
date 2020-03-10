@@ -12,6 +12,7 @@ class LogoutModule extends BaseModule.BaseModule {
     this.I.retry(this.wait).seeElement(locator.inputUserCode);
     this.I.retry(this.wait).seeElement(locator.inputUserPassword);
   }
+  
 }
 
 module.exports = new LogoutModule();

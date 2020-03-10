@@ -8,7 +8,7 @@ exports.config = {
 			require: './src/utils/AutomationHelper.js' // Import the custom helper file
 		},
 		Protractor: {
-			url: 'https://sbappqa.somosbelcorp.com',
+			url: 'http://sb2qa.somosbelcorp.com/',
 			driver: 'hosted',
 			browser: 'chrome',
 			capabilities: {

@@ -1,6 +1,7 @@
 const BaseModule = require("../../../base/BaseModule");
 
 const locator = require("./LoginLocator");
+const ConstUtil = require("../../../utils/ConstUtil");
 
 class LoginModule extends BaseModule.BaseModule {
  
@@ -17,8 +18,8 @@ class LoginModule extends BaseModule.BaseModule {
   }
 
   loginSystem() {
-    this.I.retry(this.wait).see('Espere un momento');
-    this.I.retry(this.wait).see('Inicio');
+    this.I.retry(this.wait).see(ConstUtil.WAIT_A_MOMMENT);
+    this.I.waitForElement(locator.inicioLink,ConstUtil.WAITING_TIME);
   }
 
 }
