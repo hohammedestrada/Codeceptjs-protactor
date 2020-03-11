@@ -1,12 +1,11 @@
 const BaseLocator = require('../../../base/BaseLocator');
-const BaseElement = require('../../../base/BaseElement');
 
 class FromcarouselLocator extends BaseLocator.BaseLocator {
   constructor(){
     super();
-    this.btnAddCart = (index) => `//owl-carousel-o/div/div/owl-stage/div/div/div[${index}]/div/app-belcorp-add-to-cart/div/div/button`;
-  }
-  
+    this.ofertasCatalogos = (index) => `//app-belcorp-carousel-product-catalog-offers[${index}]`
+    this.btnAddCart = (index) => `${this.ofertasCatalogos(1)}//owl-carousel-o//div[${this.xPathByClassName('owl-item')}][${index}]//button[${this.xPathByText(' Agregar ')}]`;
+  }  
 }
 
 module.exports = new FromcarouselLocator();

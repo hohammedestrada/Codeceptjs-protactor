@@ -3,12 +3,15 @@ const FromcarouselLocator = require('./FromcarouselLocator');
 
 class FromCarouselModule extends BaseModule.BaseModule {
 
-  async addButton() {
-    this.I.click(FromcarouselLocator.btnAddCart(7));
+  constructor(){
+    super();
+  }
+
+  addButton() {
+    this.I.retry(this.wait).click(FromcarouselLocator.btnAddCart(8));
   }
   
   iSeeProductConfirmation() {
-    this.I.wait(1);
     this.I.retry(this.wait).see('Producto añadido correctamente.');
   }
   

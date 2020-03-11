@@ -7,16 +7,19 @@ class BaseLocator extends BaseModule.BaseModule {
         this.locateIndex = (type,index, attrs) => {
             switch(type){
                 case BaseElement.Input:
-                    return `//body//${BaseElement.Input}[${index}][@type = '${BaseElement.BaseType.Submit}']`;
+                    return `//body//${BaseElement.Input}[${index}][${this.xPathByType(BaseElement.BaseType.Submit)}]`;
                     break;
                 case BaseElement.Button:
-                    return `//body//${BaseElement.Button}[${index}][@type = '${BaseElement.BaseType.Button}']`;
+                    return `//body//${BaseElement.Button}[${index}][${this.xPathByType(BaseElement.BaseType.Button)}]`;
                     break;
                 case BaseElement.Select:
                     return `//body//${BaseElement.Select}[${index}][${attrs}]`;
                     break;
             }
         }
+        this.xPathByClassName = (className) => `contains(normalize-space(@class), '${className}')`;
+        this.xPathByText = (text) => `text()='${text}'`;
+        this.xPathByType = (type) => `@type = '${type}'`;
     }
 }
 
