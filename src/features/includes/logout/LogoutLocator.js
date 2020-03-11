@@ -1,10 +1,10 @@
 const LoginLocator = require('../login/LoginLocator');
 
 class LogoutLocator extends LoginLocator.LoginLocator {
-  constructor(){
-    super();
-    this.logoutLink = locate('a').withAttr({ href: '/signout' });
-  }
+	constructor(){
+		super();
+		this.logoutLink = locate('a').withAttr({ href: '/signout' });
+	}
 }
 
 module.exports = new LogoutLocator();

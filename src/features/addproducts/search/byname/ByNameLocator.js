@@ -1,7 +1,7 @@
 class ByNameLocator {
-  constructor(){
+	constructor(){
     
-  }
+	}
 }
 
 module.exports = new ByNameLocator();

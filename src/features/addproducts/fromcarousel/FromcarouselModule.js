@@ -3,21 +3,21 @@ const FromcarouselLocator = require('./FromcarouselLocator');
 
 class FromCarouselModule extends BaseModule.BaseModule {
 
-  constructor(){
-    super();
-  }
+	constructor(){
+		super();
+	}
 
-  addButtonFromCatalogo() {
-    this.I.retry(this.wait).click(FromcarouselLocator.btnAddCartCatalogo(8));
-  }
+	addButtonFromCatalogo() {
+		this.I.retry(this.wait).click(FromcarouselLocator.btnAddCartCatalogo(8));
+	}
 
-  addButtonFromRevista() {
-    this.I.retry(this.wait).click(FromcarouselLocator.btnAddCartRevista(7));
-  }
+	addButtonFromRevista() {
+		this.I.retry(this.wait).click(FromcarouselLocator.btnAddCartRevista(7));
+	}
   
-  iSeeProductConfirmation() {
-    this.I.retry(this.wait).see('Producto añadido correctamente.');
-  }
+	iSeeProductConfirmation() {
+		this.I.retry(this.wait).see('Producto añadido correctamente.');
+	}
   
 }
 

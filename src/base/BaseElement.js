@@ -1,21 +1,21 @@
 class BaseType {
 
-    constructor(){
-        this.Submit = "submit";
-        this.Button = "button";
-    }
+	constructor(){
+		this.Submit = 'submit';
+		this.Button = 'button';
+	}
     
 }
 
 class BaseElement {
 
-    constructor(){
-        this.Button = "button";
-        this.Input = "input";
-        this.Select = "select";
+	constructor(){
+		this.Button = 'button';
+		this.Input = 'input';
+		this.Select = 'select';
 
-        this.BaseType = new BaseType();
-    }
+		this.BaseType = new BaseType();
+	}
     
 }
 

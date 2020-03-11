@@ -1,7 +1,7 @@
 class ValidateCartLocator {
-  constructor(){
-    this.inputSearch = locate("input").withAttr();
-  }
+	constructor(){
+		this.inputSearch = locate('input').withAttr();
+	}
 }
 
 module.exports = new ValidateCartLocator();

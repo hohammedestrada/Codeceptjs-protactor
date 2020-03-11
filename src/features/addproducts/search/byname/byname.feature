@@ -1,4 +1,4 @@
-@search
+@ignore
 Feature: Search item by Name
   In order to achieve my goals
   As a persona
