@@ -10,18 +10,23 @@ Given('I logged in with params {string}, {string} and {string}', (country, user,
   actor().saveScreenshotWithMocha(__filename,"Login correcto");
 });
 
-When('I click on agregar button', () => {
-  mModule.addButton();
-  actor().saveScreenshotWithMocha(__filename,"click en agregar producto");
+When('I click on agregar button del carousel de catalogo', () => {
+  mModule.addButtonFromCatalogo();
+  mModule.saveScreenshotWithMocha(__filename,"click en agregar producto del Catálogo");
+});
+
+When('I click on agregar button del carousel de revista', () => {
+  mModule.addButtonFromRevista();
+  mModule.saveScreenshotWithMocha(__filename,"click en agregar producto de la Revista");
 });
 
 Then('I see add product confirmation', () => {
   mModule.iSeeProductConfirmation();
-  actor().saveScreenshotWithMocha(__filename,"Confirmación de producto añadido");
+  mModule.saveScreenshotWithMocha(__filename,"Confirmación de producto añadido");
 });
 
 Then('I logout on system', () => {
   logoutModule.doLogout();
   logoutModule.verifyLogout();
-  actor().saveScreenshotWithMocha(__filename,ConstUtil.LOGOUT_MESSAGE);
+  mModule.saveScreenshotWithMocha(__filename,ConstUtil.LOGOUT_MESSAGE);
 });

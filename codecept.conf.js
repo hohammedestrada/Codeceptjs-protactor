@@ -4,9 +4,6 @@ let steps = utils.fnGetFiles('./src/features', '.steps.js', utils.fnGetFiles('./
 exports.config = {
 	output: 'report',
 	helpers: {
-		AutomationHelper: {
-			require: './src/utils/AutomationHelper.js' // Import the custom helper file
-		},
 		Protractor: {
 			url: 'http://sb2qa.somosbelcorp.com/',
 			driver: 'hosted',

@@ -23,7 +23,7 @@ class AutomationUtil {
   
   saveScreenshotWithMocha(baseName,fileName) {
     let scenario = path.basename(baseName);
-    codeceptjs.actor().retry(wait).saveScreenshot(scenario+"-"+fileName + '.png');
+    codeceptjs.actor().retry(this.wait).saveScreenshot(scenario+"-"+fileName + '.png');
     codeceptjs.actor().addMochawesomeContext(scenario+"-"+fileName);
     codeceptjs.actor().addMochawesomeContext(scenario+"-"+fileName + '.png');
   }

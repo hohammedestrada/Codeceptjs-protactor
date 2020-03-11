@@ -7,8 +7,12 @@ class FromCarouselModule extends BaseModule.BaseModule {
     super();
   }
 
-  addButton() {
-    this.I.retry(this.wait).click(FromcarouselLocator.btnAddCart(8));
+  addButtonFromCatalogo() {
+    this.I.retry(this.wait).click(FromcarouselLocator.btnAddCartCatalogo(8));
+  }
+
+  addButtonFromRevista() {
+    this.I.retry(this.wait).click(FromcarouselLocator.btnAddCartRevista(7));
   }
   
   iSeeProductConfirmation() {
