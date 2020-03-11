@@ -1,5 +1,6 @@
 const BaseModule = require('../../../base/BaseModule');
 const FromcarouselLocator = require('./FromcarouselLocator');
+const ConstUtil = require('../../../utils/ConstUtil');
 
 class FromCarouselModule extends BaseModule.BaseModule {
 
@@ -16,7 +17,7 @@ class FromCarouselModule extends BaseModule.BaseModule {
 	}
   
 	iSeeProductConfirmation() {
-		this.I.retry(this.wait).see('Producto añadido correctamente.');
+		this.I.retry(this.wait).see(ConstUtil.PRODUCTO_ANADIDO_CORRECTAMENTE);
 	}
   
 }

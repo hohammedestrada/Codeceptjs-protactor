@@ -6,18 +6,18 @@ Given(
 	'I select my {string} and put my {string} and my {string}',
 	(country, user, password) => {
 		mModule.definedSteps(country, user, password);
-		mModule.saveScreenshotWithMocha(__filename,'campos llenados correctos');
+		mModule.saveScreenshotWithMocha(__filename,ConstUtil.CAMPOS_LLENADOS_CORRECTOS);
 	}
 );
 
 When('I click on ingresar a tu cuenta', () => {
 	mModule.clickButton();
-	mModule.saveScreenshotWithMocha(__filename,'esperando ');
+	mModule.saveScreenshotWithMocha(__filename,ConstUtil.ESPERANDO);
 });
 
 Then('I login on system', () => {
 	mModule.loginSystem();
-	mModule.saveScreenshotWithMocha(__filename,'login correcto');
+	mModule.saveScreenshotWithMocha(__filename,ConstUtil.LOGIN_CORRECTO);
 });
 
 Then('I logout on system', () => {

@@ -1,22 +1,21 @@
 const mModule = require('./ByCategoriaModule');
 const LoginModule = require('../../../includes/login/LoginModule');
 const LogoutModule = require('../../../includes/logout/LogoutModule');
+const ConstUtil = require('../../../../utils/ConstUtil');
 
 Given('I logged in with params {string}, {string} and {string}', (country, user, password) => {
 	LoginModule.definedSteps(country, user, password);
 	LoginModule.clickButton();
 	LoginModule.loginSystem();
-	mModule.saveScreenshotWithMocha(__filename,'Login correcto');
+	mModule.saveScreenshotWithMocha(__filename,ConstUtil.LOGIN_CORRECTO);
 });
 
 Given('Me encuentro en la sección del menú lateral "Categorías"', () => {
-	/* mModule.addButton();
-  mModule.saveScreenshotWithMocha(__filename,"click en agregar producto"); */
+	mModule.verificarSeccionMenuLateral();
 });
 
 When('Hago click en la sección "Fragancias"', () => {
-	/*  mModule.iSeeProductConfirmation();
-  mModule.saveScreenshotWithMocha(__filename,"Confirmación de producto añadido"); */
+	//mModule.
 });
 
 Then('Se visualizan los filtros de "Fragancias"', () => {
