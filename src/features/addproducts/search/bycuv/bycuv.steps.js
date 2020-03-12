@@ -23,5 +23,5 @@ Then('I see products related', () => {
 Then('I logout on system', () => {
 	/*  LogoutModule.doLogout();
   LogoutModule.verifyLogout();
-  actor().saveScreenshotWithMocha(__filename,ConstUtil.logoutMessage); */
+  actor().saveScreenshotWithMocha(__filename,ConstUtil.LOGOUT_MESSAGE); */
 });

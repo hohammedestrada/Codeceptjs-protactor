@@ -8,6 +8,7 @@ exports.config = {
 			url: 'http://sb2qa.somosbelcorp.com/',
 			driver: 'hosted',
 			browser: 'chrome',
+			//show: false,
 			capabilities: {
 				chromeOptions: {
 					// args: [ '--headless', '--disable-gpu', '--no-sandbox' ]

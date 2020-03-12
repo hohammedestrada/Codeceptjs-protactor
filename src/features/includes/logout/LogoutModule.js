@@ -4,8 +4,8 @@ const BaseModule = require('../../../base/BaseModule');
 class LogoutModule extends BaseModule.BaseModule {
 
 	doLogout() {
-	  this.I.wait(1);
-  	this.I.retry(this.wait).click(locator.logoutLink);
+	this.waitForElement(locator.logoutLink);
+  	this.I.click(locator.logoutLink);
 	}
 	verifyLogout(){
 		this.I.retry(this.wait).seeElement(locator.selectCountry);

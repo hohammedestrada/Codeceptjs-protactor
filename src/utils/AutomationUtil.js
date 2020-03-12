@@ -4,7 +4,7 @@ const codeceptjs = require('codeceptjs');
 
 class AutomationUtil {
 	constructor(){
-		this.wait = { retries: 3, minTimeout: 2000 };
+		this.wait = { retries: 2, minTimeout: 2000 };
 	}
 
 	fnGetFiles(dir, filter = '', files_) {

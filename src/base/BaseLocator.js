@@ -17,6 +17,8 @@ class BaseLocator extends BaseModule.BaseModule {
 		this.xPathByClassName = (className) => `contains(normalize-space(@class), '${className}')`;
 		this.xPathByText = (text) => `text()='${text}'`;
 		this.xPathByType = (type) => `@type = '${type}'`;
+		this.xPathByRole = (type) => `@role = '${type}'`;
+		this.xPathByHref = (type) => `@href = '${type}'`;
 	}
 }
 
