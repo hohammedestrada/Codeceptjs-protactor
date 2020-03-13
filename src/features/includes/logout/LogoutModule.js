@@ -4,13 +4,11 @@ const BaseModule = require('../../../base/BaseModule');
 class LogoutModule extends BaseModule.BaseModule {
 
 	doLogout() {
-	this.waitForElement(locator.logoutLink);
-  	this.I.click(locator.logoutLink);
+		this.I.waitForElement(locator.logoutLink);
+  		this.I.click(locator.logoutLink);
 	}
 	verifyLogout(){
-		this.I.retry(this.wait).seeElement(locator.selectCountry);
-		this.I.retry(this.wait).seeElement(locator.inputUserCode);
-		this.I.retry(this.wait).seeElement(locator.inputUserPassword);
+		this.waitForElements([locator.selectCountry,locator.inputUserCode,locator.inputUserPassword]);
 	}
   
 }

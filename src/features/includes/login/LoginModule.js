@@ -7,7 +7,7 @@ class LoginModule extends BaseModule.BaseModule {
  
 	definedSteps(country, user, password) {
 		this.I.amOnPage('/');
-		this.waitForElement(locator.selectCountry);
+		this.I.waitForElement(locator.selectCountry);
   		this.I.selectOption(locator.selectCountry,country);
 		this.I.fillField(locator.inputUserCode, user);
 		this.I.fillField(locator.inputUserPassword, password);
@@ -18,8 +18,8 @@ class LoginModule extends BaseModule.BaseModule {
 	}
 
 	loginSystem() {
-		this.waitForElement(locator.waitingElement);
-		this.waitForElement(locator.inicioLink);
+		this.I.waitForElement(locator.waitingElement);
+		this.I.waitForElement(locator.inicioLink);
 	}
 
 }

@@ -9,15 +9,15 @@ class FromCarouselModule extends BaseModule.BaseModule {
 	}
 
 	addButtonFromCatalogo() {
-		this.I.retry(this.wait).click(FromcarouselLocator.btnAddCartCatalogo(8));
+		this.I.click(FromcarouselLocator.btnAddCartCatalogo(8));
 	}
 
 	addButtonFromRevista() {
-		this.I.retry(this.wait).click(FromcarouselLocator.btnAddCartRevista(7));
+		this.I.click(FromcarouselLocator.btnAddCartRevista(7));
 	}
   
 	iSeeProductConfirmation() {
-		this.I.retry(this.wait).see(ConstUtil.PRODUCTO_ANADIDO_CORRECTAMENTE);
+		this.I.see(ConstUtil.PRODUCTO_ANADIDO_CORRECTAMENTE);
 	}
   
 }
