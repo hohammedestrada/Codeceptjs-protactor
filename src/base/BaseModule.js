@@ -11,9 +11,11 @@ class BaseModule {
 			return actor().retry(AutomationUtil.wait);
 		}
 		this.I.waitForElement = (element) => {
+			this.I.wait(1);
 			return this.I.retry().waitForElement(element,ConstUtil.WAITING_TIME);
 		}
 		this.waitForElements = (elements) => {
+			this.I.wait(2);
 			elements.forEach((element) => {
 				this.I.retry().waitForElement(element,ConstUtil.WAITING_TIME);
 			});
