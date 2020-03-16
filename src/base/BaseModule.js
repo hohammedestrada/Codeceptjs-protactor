@@ -1,15 +1,14 @@
 const AutomationUtil = require('../utils/AutomationUtil');
 const ConstUtil = require('../utils/ConstUtil');
 
-class BaseModule extends AutomationUtil.AutomationUtil {
+class BaseModule {
 	constructor(){
-		super();
 		this.I = actor();
 		this.I.click = (element) => {
 			return this.I.retry().click(element);
 		}
 		this.I.retry = () => {
-			return actor().retry(this.wait);
+			return actor().retry(AutomationUtil.wait);
 		}
 		this.I.waitForElement = (element) => {
 			return this.I.retry().waitForElement(element,ConstUtil.WAITING_TIME);
@@ -23,9 +22,10 @@ class BaseModule extends AutomationUtil.AutomationUtil {
 		this.I.see = (element) => {
 			return this.I.retry().see(element);
 		}
-	}
-
-	
+		this.saveScreenshotWithMocha = (baseName,fileName) => {
+			AutomationUtil.saveScreenshotWithMocha(baseName,fileName);
+		}
+	}	
 }
 
 module.exports = new BaseModule();
