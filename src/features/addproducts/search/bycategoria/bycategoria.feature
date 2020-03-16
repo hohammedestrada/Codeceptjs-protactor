@@ -11,7 +11,7 @@ Scenario Outline: Filtrar categorías en el landing de productos
   And Hago click en la sección Fragancias
   Then Se visualizan los filtros de Fragancias
   And Y los productos están filtrados en el landing
-  And I logout on system bycategoria
+  And I logout on system bycategoria.feature 
 
 Examples:
   | country | user | password |

@@ -36,7 +36,7 @@ Then('Y los productos están filtrados en el landing', () => {
 	mModule.saveScreenshotWithMocha(__filename,ConstUtil.PRODUCTOS_FILTRADOS_EN_EL_LANDING);
 });
 
-Then('I logout on system bycategoria', () => {
+Then('I logout on system bycategoria.feature', () => {
 	mModule.abrirMenuLateral();
 	LogoutModule.doLogout();
 	LogoutModule.verifyLogout();
