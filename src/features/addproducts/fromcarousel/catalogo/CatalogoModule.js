@@ -1,15 +1,15 @@
 const BaseModule = require('../../../../base/BaseModule');
-const CatalogoLocator = require('./CatalogoLocator');
+const locator = require('./CatalogoLocator');
 const ConstUtil = require('../../../../utils/ConstUtil');
 
-class FromCarouselModule extends BaseModule.BaseModule {
+class CatalogoModule extends BaseModule.BaseModule {
 
 	constructor(){
 		super();
 	}
 
 	addButtonFromCatalogo() {
-		this.I.click(CatalogoLocator.btnAddCartCatalogo(8));
+		this.I.click(locator.btnAddCartCatalogo(8));
 	}
   
 	iSeeProductConfirmation() {
@@ -18,5 +18,5 @@ class FromCarouselModule extends BaseModule.BaseModule {
   
 }
 
-module.exports = new FromCarouselModule();
-module.exports.FromCarouselModule = FromCarouselModule;
+module.exports = new CatalogoModule();
+module.exports.CatalogoModule = CatalogoModule;

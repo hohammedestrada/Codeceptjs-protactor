@@ -1,5 +1,5 @@
 const BaseModule = require('../../../../base/BaseModule');
-const RevistaLocator = require('./RevistaLocator');
+const locator = require('./RevistaLocator');
 const ConstUtil = require('../../../../utils/ConstUtil');
 
 class RevistaModule extends BaseModule.BaseModule {
@@ -9,7 +9,7 @@ class RevistaModule extends BaseModule.BaseModule {
 	}
 	
 	addButtonFromRevista() {
-		this.I.click(RevistaLocator.btnAddCartRevista(7));
+		this.I.click(locator.btnAddCartRevista(7));
 	}
   
 	iSeeProductConfirmation() {

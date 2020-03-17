@@ -1,7 +1,5 @@
 const BaseModule = require('../../../base/BaseModule');
-
 const locator = require('./LoginLocator');
-const ConstUtil = require('../../../utils/ConstUtil');
 
 class LoginModule extends BaseModule.BaseModule {
  

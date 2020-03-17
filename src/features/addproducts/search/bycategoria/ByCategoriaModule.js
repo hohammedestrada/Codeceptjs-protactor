@@ -1,5 +1,5 @@
 const BaseModule = require('../../../../base/BaseModule');
-const ByCategoriaLocator = require('./ByCategoriaLocator');
+const locator = require('./ByCategoriaLocator');
 
 class ByCategoriaModule extends BaseModule.BaseModule {
 	constructor(){
@@ -7,37 +7,32 @@ class ByCategoriaModule extends BaseModule.BaseModule {
 	}
 
 	verificarSeccionMenuLateral(){
-		this.I.waitForElement(ByCategoriaLocator.linkCategoria);
+		this.I.waitForElement(locator.linkCategoria);
 	}
 	
 	clickEnCategoria(){
-		this.I.click(ByCategoriaLocator.linkCategoria);
+		this.I.click(locator.linkCategoria);
 	}
 
 	verificarLinkDeFragancias(){
-		this.I.waitForElement(ByCategoriaLocator.linkFragancias);
+		this.I.waitForElement(locator.linkFragancias);
 	}
 	
 	clickEnSeccionFragancias(){
-		this.I.click(ByCategoriaLocator.linkFragancias);
+		this.I.click(locator.linkFragancias);
 	}
 
 	verificarFiltrosDeFragancias(){
 		this.waitForElements(
-			[ByCategoriaLocator.menuLateralFragancias(1),
-				ByCategoriaLocator.menuLateralFragancias(2),
-				ByCategoriaLocator.menuLateralFragancias(3),
-				ByCategoriaLocator.menuLateralFragancias(4)]
+			[locator.menuLateralFragancias(1),
+				locator.menuLateralFragancias(2),
+				locator.menuLateralFragancias(3),
+				locator.menuLateralFragancias(4)]
 				);
 	}
 
 	verificarProductosFiltradosEnElLanding(){
-		this.I.waitForElement(ByCategoriaLocator.categoryLandingProduct);
-	}
-
-	abrirMenuLateral(){
-		this.I.waitForElement(ByCategoriaLocator.hamburgerMenu);
-		this.I.click(ByCategoriaLocator.hamburgerMenu);
+		this.I.waitForElement(locator.categoryLandingProduct);
 	}
 }
 

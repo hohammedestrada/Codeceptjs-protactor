@@ -1,5 +1,11 @@
 class ConstUtil {
 	constructor(){
+		this.SE_VIZUALIZA_PRODUCTO_REVISTA_CON_SELECTOR_CANTIDAD_BOTON_AGREGAR = 'se visualiza producto de revista con el selector de cantidad y botón Agregar';
+		this.SE_PRIORIZA_PRODUCTO_CON_TAG_APLICA_DESCUENTO_CON_BOTON_VER_DETALLE = 'se prioriza producto de catálogo con el tag Aplica descuento con el botón Ver detalle';
+		this.SE_MUESTRAN_ETIQUETAS_RESPECTIVAS = 'se muestran las etiquetas respectivas';
+		this.SE_VISUALIZAN_PRODUCTOS_COINCIDENTES_AMBOS_MEDIOS = 'se visualizan los productos coincidentes de ambos medios';
+		this.TERMINO_DE_DIGITAR_PALABRA_BUSCADA = 'termino de digitar la palabra buscada';
+		this.DIGITO_UN_PRODUCTO_SE_ENCUENTRA_EN_AMBOS_MEDIOS = 'digito un producto que se encuentra en ambos medios';
 		this.VERIFICAR_LINK_FRAGANCIAS = 'verificar link fragancias';
 		this.PRODUCTOS_FILTRADOS_EN_EL_LANDING = 'productos filtrados en el landing';
 		this.HAGO_CLICK_SECCION_FRAGANCIAS = 'hago click en seccion fragancias';

@@ -37,7 +37,7 @@ Then('Y los productos están filtrados en el landing', () => {
 });
 
 Then('I logout on system bycategoria.feature', () => {
-	mModule.abrirMenuLateral();
+	LogoutModule.abrirMenuLateral();
 	LogoutModule.doLogout();
 	LogoutModule.verifyLogout();
 	mModule.saveScreenshotWithMocha(__filename,ConstUtil.LOGOUT_MESSAGE);

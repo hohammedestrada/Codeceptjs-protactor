@@ -1,16 +1,20 @@
-@ignore
-Feature: Search item by Name
+@search
+Feature: Buscar una oferta por nombre que tenga más de un medio de venta
   In order to achieve my goals
   As a persona
-  I want to be able to log in system
+  I quiero permitir buscar un producto por nombre
 
-Scenario Outline: Search item by Name
-  Given I logged in with params "<country>", "<user>" and "<password>"
-  When  I write name of product and press enter
-  Then  I see products related
-  And   I logout on system
+Scenario Outline: Buscar una oferta por nombre que tenga más de un medio de venta
+  Given Me encuentro en el buscador del home "<country>", "<user>" and "<password>"
+  Given Digito un producto que se encuentra en ambos medios Ej. "<producto>"
+  When Termino de digitar la palabra buscada
+  Then Se visualizan los productos coincidentes de ambos medios
+  And Se muestran las etiquetas respectivas
+  And Se prioriza producto de catálogo con el tag "Aplica descuento" con el botón "Ver detalle"
+  And Se visualiza producto de revista con el selector de cantidad y botón "Agregar"
+  And I logout on system byname.feature
 
 Examples:
-  | country | user | password |
-  | PE | 041702206 | 1 |
+  | country | user | password | producto |
+  | PE | 041702206 | 1 | perfume |
   
