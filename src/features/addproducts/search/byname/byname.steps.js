@@ -3,7 +3,7 @@ const LoginModule = require('../../../includes/login/LoginModule');
 const LogoutModule = require('../../../includes/logout/LogoutModule');
 const ConstUtil = require('../../../../utils/ConstUtil');
 
-Given('Me encuentro en el buscador del home {string}, {string} and {string}', (country, user, password) => {
+Given('Me encuentro en el buscador del home {string}, {string} and {string} byname.feature', (country, user, password) => {
 	LoginModule.definedSteps(country, user, password);
 	LoginModule.clickButton();
 	LoginModule.loginSystem();
@@ -24,14 +24,14 @@ Then('Se visualizan los productos coincidentes de ambos medios', () => {
 	mModule.saveScreenshotWithMocha(__filename,ConstUtil.SE_VISUALIZAN_PRODUCTOS_COINCIDENTES_AMBOS_MEDIOS);
 });
 
-Then('Se muestran las etiquetas respectivas', () => {
-	mModule.seVisualizanEtiquetasRespectivas();
+Then('Se muestran las etiquetas respectivas {int}', (posicion) => {
+	mModule.seVisualizanEtiquetasRespectivas(posicion);
 	mModule.saveScreenshotWithMocha(__filename,ConstUtil.SE_MUESTRAN_ETIQUETAS_RESPECTIVAS);
 });
 
-Then('Se prioriza producto de catálogo con el tag "Aplica descuento" con el botón "Ver detalle"', () => {
-	mModule.seVisualizanAplicaDescuentoVerDetalle();
-	mModule.clickVerDetalle();
+Then('Se prioriza producto de catálogo con el tag "Aplica descuento" con el botón "Ver detalle" {int}', (posicion) => {
+	mModule.seVisualizanAplicaDescuentoVerDetalle(posicion);
+	mModule.clickVerDetalle(posicion);
 	mModule.saveScreenshotWithMocha(__filename,ConstUtil.SE_PRIORIZA_PRODUCTO_CON_TAG_APLICA_DESCUENTO_CON_BOTON_VER_DETALLE);
 });
 

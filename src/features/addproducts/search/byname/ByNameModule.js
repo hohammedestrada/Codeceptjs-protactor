@@ -15,16 +15,16 @@ class ByNameModule extends BaseModule.BaseModule {
 		this.I.waitForElement(locator.productsLi);
 	}
 
-	seVisualizanEtiquetasRespectivas(){
-		this.waitForElements([locator.txtAplicaDescuento,locator.txtTitulo]);
+	seVisualizanEtiquetasRespectivas(posicion){
+		this.waitForElements([locator.txtAplicaDescuento(posicion),locator.txtTitulo(posicion)]);
 	}
 	
-	seVisualizanAplicaDescuentoVerDetalle(){
-		this.waitForElements([locator.txtAplicaDescuento,locator.btnVerDetalle(2)]);
+	seVisualizanAplicaDescuentoVerDetalle(posicion){
+		this.waitForElements([locator.txtAplicaDescuento(posicion),locator.btnVerDetalle(posicion)]);
 	}
 
-	clickVerDetalle(){
-		this.I.click(locator.btnVerDetalle(2));
+	clickVerDetalle(posicion){
+		this.I.click(locator.btnVerDetalle(posicion));
 	}
 
 	seVisualizaElBotonAgregarYSelectorCantidad(){

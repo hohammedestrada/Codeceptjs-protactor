@@ -1,5 +1,10 @@
 class ConstUtil {
 	constructor(){
+		this.CLICK_AGREGAR = 'Hago click en el boton Agregar';
+		this.SE_MUESTRA_MODAL_PRODUCTO_ANADIDO_CORRECTAMENTE = 'Se muestra el modal snack bar Producto añadido correctamente';
+		this.PRODUCTO_AGREGADO_CARRITO = 'El producto está agregado en el carrito';
+		this.SE_VISUALIZA_LA_CANTIDAD_ADICIONO = 'Se visualiza la cantidad que se adicionó';
+		this.DIGITO_UN_PRODUCTO_POR_CUV = 'digito un producto por cuv';
 		this.SE_VIZUALIZA_PRODUCTO_REVISTA_CON_SELECTOR_CANTIDAD_BOTON_AGREGAR = 'se visualiza producto de revista con el selector de cantidad y botón Agregar';
 		this.SE_PRIORIZA_PRODUCTO_CON_TAG_APLICA_DESCUENTO_CON_BOTON_VER_DETALLE = 'se prioriza producto de catálogo con el tag Aplica descuento con el botón Ver detalle';
 		this.SE_MUESTRAN_ETIQUETAS_RESPECTIVAS = 'se muestran las etiquetas respectivas';

@@ -1,12 +1,11 @@
-const BaseLocator = require('../../../../base/BaseLocator');
+const SearchLocator = require('../SearchLocator')
 
-class ByNameLocator extends BaseLocator.BaseLocator {
+class ByNameLocator extends SearchLocator.SearchLocator {
 	constructor(){
 		super();
-		this.inputSearch = `//cx-page-layout[1]/cx-page-slot[2]/belcorp-search-box/label/input`;
 		this.productsLi = `//cx-page-layout[1]/cx-page-slot[2]/belcorp-search-box/div/ul/li`;
-		this.txtTitulo = `//cx-page-layout[1]/cx-page-slot[2]/belcorp-search-box/div/ul/li[2]/div/a/h4`;
-		this.txtAplicaDescuento = `//cx-page-slot[2]/belcorp-search-box/div/ul/li[2]/div/a/div/span[2]/span[2]`;
+		this.txtTitulo = (index) => `//cx-page-layout[1]/cx-page-slot[2]/belcorp-search-box/div/ul/li[${index}]/div/a/h4`;
+		this.txtAplicaDescuento = (index) => `//cx-page-slot[2]/belcorp-search-box/div/ul/li[${index}]/div/a/div/span[2]/span[2]`;
 		this.btnVerDetalle = (index) => `//cx-page-layout[1]/cx-page-slot[2]/belcorp-search-box/div/ul/li[${index}]/div/button`;
 		this.rdbCatalogo = `//*[@id="toYourClientCheckbox"]`;
 		this.rdbRevista = `//*[@id="toYouClientCheckbox"]`;
