@@ -1,6 +1,6 @@
-const BaseLocator = require('../../../../base/BaseLocator');
+const SomosBelcorpLocator = require('../../../../locators/SomosBelcorpLocator');
 
-class ByCategoriaLocator extends BaseLocator.BaseLocator {
+class ByCategoriaLocator extends SomosBelcorpLocator.SomosBelcorpLocator {
 	constructor(){
 		super();
 		this.linkCategoria = `//h5[${this.xPathByText(' Categorías ')}]`;

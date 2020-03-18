@@ -1,4 +1,4 @@
-const SearchLocator = require('../SearchLocator')
+const SearchLocator = require('../SearchLocator');
 
 class ByCuvLocator extends SearchLocator.SearchLocator {
 	constructor(){

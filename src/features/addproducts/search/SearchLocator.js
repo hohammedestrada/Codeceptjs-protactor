@@ -1,6 +1,6 @@
-const BaseLocator = require('../../../base/BaseLocator');
+const SomosBelcorpLocator = require('../../../locators/SomosBelcorpLocator');
 
-class SearchLocator extends BaseLocator.BaseLocator {
+class SearchLocator extends SomosBelcorpLocator.SomosBelcorpLocator {
 	constructor(){
 		super();
 		this.modalAddCartConfirmation = `//cx-global-message/div`;

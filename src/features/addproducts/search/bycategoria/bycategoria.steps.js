@@ -1,6 +1,6 @@
 const mModule = require('./ByCategoriaModule');
-const LoginModule = require('../../../includes/login/LoginModule');
-const LogoutModule = require('../../../includes/logout/LogoutModule');
+const LoginModule = require('../../../../modules/LoginModule');
+const LogoutModule = require('../../../../modules/LogoutModule');
 const ConstUtil = require('../../../../utils/ConstUtil');
 
 Given('I logged in with params {string}, {string} and {string}', (country, user, password) => {

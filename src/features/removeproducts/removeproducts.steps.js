@@ -1,6 +1,6 @@
 const mModule = require('./RemoveProductsModule');
-const LoginModule = require('../includes/login/LoginModule');
-const LogoutModule = require('../includes/logout/LogoutModule');
+const LoginModule = require('../../modules/LoginModule');
+const LogoutModule = require('../../modules/LogoutModule');
 const ConstUtil = require('../../utils/ConstUtil');
 
 Given('Dado que me encuentro en el pedido "<country>", "<user>" and "<password>" removeproducts.feature', (country, user, password) => {

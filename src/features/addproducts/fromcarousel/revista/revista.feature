@@ -1,4 +1,4 @@
-@addproducts
+@addproducts/fromcarousel
 Feature: Agregar item a carrito desde carrusel de revista
   In order to achieve my goals
   As a persona

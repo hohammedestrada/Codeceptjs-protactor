@@ -1,6 +1,6 @@
-const BaseLocator = require('../../../base/BaseLocator');
+const SomosBelcorpLocator = require('../../../locators/SomosBelcorpLocator');
 
-class FromcarouselLocator extends BaseLocator.BaseLocator {
+class FromcarouselLocator extends SomosBelcorpLocator.SomosBelcorpLocator {
 	constructor(){
 		super();
 		this.ofertasCatalogos = (index) => `//app-belcorp-carousel-product-catalog-offers[${index}]`;

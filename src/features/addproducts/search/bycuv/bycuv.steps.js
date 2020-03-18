@@ -1,6 +1,6 @@
 const mModule = require('./ByCuvModule');
-const LoginModule = require('../../../includes/login/LoginModule');
-const LogoutModule = require('../../../includes/logout/LogoutModule');
+const LoginModule = require('../../../../modules/LoginModule');
+const LogoutModule = require('../../../../modules/LogoutModule');
 const ConstUtil = require('../../../../utils/ConstUtil');
 
 Given('Me encuentro en el buscador del home {string}, {string} and {string} bycuv.feature', (country, user, password) => {

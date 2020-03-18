@@ -1,12 +1,12 @@
 const BaseModule = require('../../base/BaseModule');
 const locator = require('./RemoveProductsLocator');
 
-class ByNameModule extends BaseModule.BaseModule {
+class RemoveProductsModule extends BaseModule.BaseModule {
 	constructor(){
 		super();
 	}
 
 }
 
-module.exports = new ByNameModule();
-module.exports.ByNameModule = ByNameModule;
+module.exports = new RemoveProductsModule();
+module.exports.RemoveProductsModule = RemoveProductsModule;

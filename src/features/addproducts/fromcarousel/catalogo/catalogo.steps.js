@@ -1,7 +1,7 @@
 const ConstUtil = require('../../../../utils/ConstUtil');
 const mModule = require('./CatalogoModule');
-const logInModule = require('../../../includes/login/LoginModule');
-const logoutModule = require('../../../includes/logout/LogoutModule');
+const logInModule = require('../../../../modules/LoginModule');
+const logoutModule = require('../../../../modules/LogoutModule');
 
 Given('I logged in with params {string}, {string} and {string}', (country, user, password) => {
 	logInModule.definedSteps(country, user, password);

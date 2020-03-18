@@ -1,5 +1,5 @@
-const locator = require('./LogoutLocator');
-const BaseModule = require('../../../base/BaseModule');
+const locator = require('../locators/LogoutLocator');
+const BaseModule = require('../base/BaseModule');
 
 class LogoutModule extends BaseModule.BaseModule {
 

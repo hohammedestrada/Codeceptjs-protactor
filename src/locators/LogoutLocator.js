@@ -1,4 +1,4 @@
-const LoginLocator = require('../login/LoginLocator');
+const LoginLocator = require('./LoginLocator');
 
 class LogoutLocator extends LoginLocator.LoginLocator {
 	constructor(){

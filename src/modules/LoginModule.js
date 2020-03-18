@@ -1,7 +1,10 @@
-const BaseModule = require('../../../base/BaseModule');
-const locator = require('./LoginLocator');
+const BaseModule = require('../base/BaseModule');
+const locator = require('../locators/LoginLocator');
 
 class LoginModule extends BaseModule.BaseModule {
+	constructor(){
+		super();
+	}
  
 	definedSteps(country, user, password) {
 		this.I.amOnPage('/');

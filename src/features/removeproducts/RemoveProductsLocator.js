@@ -1,6 +1,6 @@
-const BaseLocator = require('../../base/BaseLocator');
+const SomosBelcorpLocator = require('../../locators/SomosBelcorpLocator');
 
-class RemoveProductsLocator extends BaseLocator.BaseLocator {
+class RemoveProductsLocator extends SomosBelcorpLocator.SomosBelcorpLocator {
 	constructor(){
 		super();
 		

@@ -1,10 +1,9 @@
 const BaseElement = require('./BaseElement');
-const BaseModule = require('./BaseModule');
-class BaseLocator extends BaseModule.BaseModule {
+
+class BaseLocator {
 	constructor(){
 		var xPath = '';
 
-		super();
 		this.locateIndex = (type,index, attrs) => {
 			switch(type){
 			case BaseElement.Input:
@@ -31,9 +30,6 @@ class BaseLocator extends BaseModule.BaseModule {
 			}
 			return this;
 		}
-		this.iconCart = `//cx-storefront/header/cx-page-layout[1]/cx-page-slot[3]/cx-mini-cart/a`;
-		this.inputSearch = `//cx-page-layout[1]/cx-page-slot[2]/belcorp-search-box/label/input`;
-		this.hamburgerMenu = `//cx-hamburger-menu/button`;
 	}
 }
 

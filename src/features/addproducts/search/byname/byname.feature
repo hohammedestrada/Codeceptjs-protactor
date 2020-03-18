@@ -1,4 +1,4 @@
-@search
+@addproducts/search
 Feature: Buscar una oferta por nombre que tenga más de un medio de venta
   In order to achieve my goals
   As a persona
