@@ -1,4 +1,4 @@
-@search
+@searchss
 Feature: Filtrar categorías en el landing de productos
   In order to achieve my goals
   As a persona

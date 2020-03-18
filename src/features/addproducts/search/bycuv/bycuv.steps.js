@@ -39,5 +39,5 @@ Then('I logout on system bycuv.feature', () => {
 	LogoutModule.abrirMenuLateral();
 	LogoutModule.doLogout();
 	LogoutModule.verifyLogout();
-	LogoutModule.saveScreenshotWithMocha(__filename,ConstUtil.LOGOUT_MESSAGE);
+	mModule.saveScreenshotWithMocha(__filename,ConstUtil.LOGOUT_MESSAGE);
 });

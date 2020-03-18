@@ -17,4 +17,3 @@ Scenario Outline: Buscar una oferta por nombre que tenga más de un medio de ven
 Examples:
   | country | user | password | producto | posicion |
   | PE | 041702206 | 1 | perfume | 3 |
-  

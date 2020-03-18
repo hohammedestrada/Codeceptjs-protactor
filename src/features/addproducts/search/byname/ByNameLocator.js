@@ -10,7 +10,7 @@ class ByNameLocator extends SearchLocator.SearchLocator {
 		this.rdbCatalogo = `//*[@id="toYourClientCheckbox"]`;
 		this.rdbRevista = `//*[@id="toYouClientCheckbox"]`;
 		this.selectorCantidad = `//app-belcorp-add-to-cart/div/div[1]/cx-item-counter/div/div/button[2]`;
-		this.btnAgregar = `//app-belcorp-add-to-cart/div/div[2]/button`;
+		this.btnAgregar = `//app-belcorp-product-summary/div/div/div[2]/div/div/div/app-belcorp-add-to-cart/div/div[2]/button`;
 	}
 }
 

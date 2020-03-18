@@ -1,4 +1,4 @@
-@search
+@searchsss
 Feature: Buscar una oferta por cuv que tenga más de un medio de venta
   In order to achieve my goals
   As a persona
