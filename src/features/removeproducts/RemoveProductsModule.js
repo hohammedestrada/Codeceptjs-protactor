@@ -6,6 +6,37 @@ class RemoveProductsModule extends BaseModule.BaseModule {
 		super();
 	}
 
+	clickIconCart(){
+		this.I.click(locator.iconCart);
+	}
+
+	verificarCantidadProductosInicial(){
+
+	}
+
+	eliminarProductoPulsandoElTachito(cuv) {
+		this.I.click(locator.tachito(cuv));
+	}
+
+	verificarModal(){
+
+	}
+
+	verificarOpciones(){
+
+	}
+
+	clickBotonSi(){
+
+	}
+
+	verificarProductoNoSeaEncontrado(){
+
+	}
+
+	verificarCantidadProductosActual(){
+		
+	}
 }
 
 module.exports = new RemoveProductsModule();

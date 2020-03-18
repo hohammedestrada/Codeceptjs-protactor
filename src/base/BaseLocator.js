@@ -2,8 +2,6 @@ const BaseElement = require('./BaseElement');
 
 class BaseLocator {
 	constructor(){
-		var xPath = '';
-
 		this.locateIndex = (type,index, attrs) => {
 			switch(type){
 			case BaseElement.Input:
@@ -20,9 +18,19 @@ class BaseLocator {
 		this.xPathByRole = (type) => `@role = '${type}'`;
 		this.xPathByHref = (type) => `@href = '${type}'`;
 		this.xPath = (path) => {
-			xPath = path;
-			this.upTo = (xPathTo) => {
-				xPath+'/../'+xPathTo;
+			var xPath = path;
+			
+			this.upTo = (pathTo,times=1) => {
+				if(times < 1)
+					throw "las veces deben ser mayor o igual a 1";
+				for(var i= 0; i< times-1; i++){
+					xPath += '/..';
+				}
+				xPath += '/../'+pathTo;
+				return this;
+			}
+			this.goTo = (pathTo) => {
+				xPath += pathTo;
 				return this;
 			}
 			this.build = () => {
