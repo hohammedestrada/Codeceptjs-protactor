@@ -1,27 +1,43 @@
-const mModule = require('./ByCUVModule');
-/* const ConstUtil = require('../../../../utils/ConstUtil');
+const mModule = require('./ByCuvModule');
 const LoginModule = require('../../../includes/login/LoginModule');
-const LogoutModule = require('../../../includes/logout/LogoutModule'); */
+const LogoutModule = require('../../../includes/logout/LogoutModule');
+const ConstUtil = require('../../../../utils/ConstUtil');
 
-Given('I logged in with params {string}, {string} and {string}', (country, user, password) => {
-	/* LoginModule.definedSteps(country, user, password);
-  LoginModule.clickButton();
-  LoginModule.loginSystem();
-  actor().saveScreenshotWithMocha(__filename,"Login correcto"); */
+Given('Me encuentro en el buscador del home {string}, {string} and {string} bycuv.feature', (country, user, password) => {
+	LoginModule.definedSteps(country, user, password);
+	LoginModule.clickButton();
+	LoginModule.loginSystem();
+	mModule.saveScreenshotWithMocha(__filename,ConstUtil.LOGIN_CORRECTO);
 });
 
-When('I write name of product and press enter', () => {
-	/* mModule.addButton();
-  actor().saveScreenshotWithMocha(__filename,"click en agregar producto"); */
+Given('Digito un producto por CUV {string}', (cuv) => {
+	mModule.buscarProducto(cuv);
+	mModule.saveScreenshotWithMocha(__filename,ConstUtil.DIGITO_UN_PRODUCTO_POR_CUV);
 });
 
-Then('I see products related', () => {
-	/*  mModule.iSeeProductConfirmation();
-  actor().saveScreenshotWithMocha(__filename,"Confirmación de producto añadido"); */
+When('Aumento la {int} Hago click en el boton Agregar', (cantidad) => {
+	mModule.agregarAlCarrito(cantidad);
+	mModule.saveScreenshotWithMocha(__filename,ConstUtil.CLICK_AGREGAR);
 });
 
-Then('I logout on system', () => {
-	/*  LogoutModule.doLogout();
-  LogoutModule.verifyLogout();
-  actor().saveScreenshotWithMocha(__filename,ConstUtil.logoutMessage); */
+Then('Se muestra el modal snack bar "Producto añadido correctamente"', () => {
+	mModule.seMuestraElmodalDeconfirmacion()
+	mModule.saveScreenshotWithMocha(__filename,ConstUtil.SE_MUESTRA_MODAL_PRODUCTO_ANADIDO_CORRECTAMENTE);
+});
+
+Then('El producto está agregado en el carrito', () => {
+	mModule.estaAgregadoAlCarrito();
+	mModule.saveScreenshotWithMocha(__filename,ConstUtil.PRODUCTO_AGREGADO_CARRITO);
+});
+
+Then('Se visualiza la cantidad que se adicionó', () => {
+	mModule.seVisualizaLaCantidadQueSeAdiciono();
+	mModule.saveScreenshotWithMocha(__filename,ConstUtil.SE_VISUALIZA_LA_CANTIDAD_ADICIONO);
+});
+
+Then('I logout on system bycuv.feature', () => {
+	LogoutModule.abrirMenuLateral();
+	LogoutModule.doLogout();
+	LogoutModule.verifyLogout();
+	LogoutModule.saveScreenshotWithMocha(__filename,ConstUtil.LOGOUT_MESSAGE);
 });

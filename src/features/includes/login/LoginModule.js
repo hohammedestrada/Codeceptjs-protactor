@@ -1,14 +1,12 @@
 const BaseModule = require('../../../base/BaseModule');
-
 const locator = require('./LoginLocator');
-const ConstUtil = require('../../../utils/ConstUtil');
 
 class LoginModule extends BaseModule.BaseModule {
  
 	definedSteps(country, user, password) {
 		this.I.amOnPage('/');
-	  this.I.wait(1);
-  	this.I.selectOption(locator.selectCountry,country);
+		this.I.waitForElement(locator.selectCountry);
+  		this.I.selectOption(locator.selectCountry,country);
 		this.I.fillField(locator.inputUserCode, user);
 		this.I.fillField(locator.inputUserPassword, password);
 	}
@@ -18,8 +16,8 @@ class LoginModule extends BaseModule.BaseModule {
 	}
 
 	loginSystem() {
-		this.I.retry(this.wait).see(ConstUtil.WAIT_A_MOMMENT);
-		this.I.waitForElement(locator.inicioLink,ConstUtil.WAITING_TIME);
+		this.I.waitForElement(locator.waitingElement);
+		this.I.waitForElement(locator.inicioLink);
 	}
 
 }

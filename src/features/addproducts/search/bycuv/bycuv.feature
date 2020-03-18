@@ -1,16 +1,19 @@
-@ignore
-Feature: Search item by Name
+@search
+Feature: Buscar una oferta por cuv que tenga más de un medio de venta
   In order to achieve my goals
   As a persona
-  I want to be able to log in system
+  I quiero permitir buscar un producto por cuv
 
-Scenario Outline: Search item by Name
-  Given I logged in with params "<country>", "<user>" and "<password>"
-  When  I write name of product and press enter
-  Then  I see products related
-  And   I logout on system
+Scenario Outline: Buscar una oferta por CUV desde el buscador
+  Given Me encuentro en el buscador del home "<country>", "<user>" and "<password>" bycuv.feature
+  Given Digito un producto por CUV "<cuv>"
+  When Aumento la <cantidad> Hago click en el boton Agregar
+  Then Se muestra el modal snack bar "Producto añadido correctamente"
+  And El producto está agregado en el carrito
+  And Se visualiza la cantidad que se adicionó
+  And I logout on system bycuv.feature 
 
 Examples:
-  | country | user | password |
-  | PE | 041702206 | 1 |
+  | country | user | password | cuv | cantidad |
+  | PE | 041702206 | 1 | 71289 | 5 |
   

@@ -1,5 +1,5 @@
-const utils = require('./src/utils/AutomationUtil');
-let steps = utils.fnGetFiles('./src/features', '.steps.js', utils.fnGetFiles('./src/features', '.steps.ts'));
+const AutomationUtil = require('./src/utils/AutomationUtil');
+let steps = AutomationUtil.fnGetFiles('./src/features', '.steps.js');
 
 exports.config = {
 	output: 'report',
@@ -8,6 +8,7 @@ exports.config = {
 			url: 'http://sb2qa.somosbelcorp.com/',
 			driver: 'hosted',
 			browser: 'chrome',
+			//show: false,
 			capabilities: {
 				chromeOptions: {
 					// args: [ '--headless', '--disable-gpu', '--no-sandbox' ]

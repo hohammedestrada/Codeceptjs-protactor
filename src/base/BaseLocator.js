@@ -1,8 +1,9 @@
 const BaseElement = require('./BaseElement');
 const BaseModule = require('./BaseModule');
-
 class BaseLocator extends BaseModule.BaseModule {
 	constructor(){
+		var xPath = '';
+
 		super();
 		this.locateIndex = (type,index, attrs) => {
 			switch(type){
@@ -17,6 +18,21 @@ class BaseLocator extends BaseModule.BaseModule {
 		this.xPathByClassName = (className) => `contains(normalize-space(@class), '${className}')`;
 		this.xPathByText = (text) => `text()='${text}'`;
 		this.xPathByType = (type) => `@type = '${type}'`;
+		this.xPathByRole = (type) => `@role = '${type}'`;
+		this.xPathByHref = (type) => `@href = '${type}'`;
+		this.xPath = (path) => {
+			xPath = path;
+			this.upTo = (xPathTo) => {
+				xPath+'/../'+xPathTo;
+				return this;
+			}
+			this.build = () => {
+				return xPath;
+			}
+			return this;
+		}
+		
+
 	}
 }
 

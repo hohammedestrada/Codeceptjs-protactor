@@ -5,6 +5,7 @@ class LoginLocator extends BaseLocator.BaseLocator {
 	constructor(){
 		super();
 		this.btnLogin = this.locateIndex(BaseElement.Input,1);
+		this.waitingElement = `//belcorp-single-sign-on/div/p`;
 		this.inicioLink = locate('a').withAttr({ href: '/' });
 		this.selectCountry = locate('select').withAttr({id:'ddlPais'});
 		this.inputUserCode = '//input[@id = \'txtUsuario\']';
