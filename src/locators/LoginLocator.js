@@ -1,7 +1,7 @@
 const BaseElement = require('../base/BaseElement');
-const SomosBelcorpLocator = require('./SomosBelcorpLocator');
+const MenuLocator = require('./MenuLocator');
 
-class LoginLocator extends SomosBelcorpLocator.SomosBelcorpLocator {
+class LoginLocator extends MenuLocator.MenuLocator {
 	constructor(){
 		super();
 		this.btnLogin = this.locateIndex(BaseElement.Input,1);

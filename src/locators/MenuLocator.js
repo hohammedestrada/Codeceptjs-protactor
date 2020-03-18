@@ -1,6 +1,6 @@
 const BaseLocator = require('../base/BaseLocator')
 
-class SomosBelcorpLocator extends BaseLocator.BaseLocator {
+class MenuLocator extends BaseLocator.BaseLocator {
 	constructor(){
         super();
         this.iconCart = `//cx-storefront/header/cx-page-layout[1]/cx-page-slot[3]/cx-mini-cart/a`;
@@ -9,5 +9,5 @@ class SomosBelcorpLocator extends BaseLocator.BaseLocator {
 	}
 }
 
-module.exports = new SomosBelcorpLocator();
-module.exports.SomosBelcorpLocator = SomosBelcorpLocator;
+module.exports = new MenuLocator();
+module.exports.MenuLocator = MenuLocator;

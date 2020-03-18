@@ -27,7 +27,7 @@ class RemoveProductsModule extends BaseModule.BaseModule {
 	}
 
 	clickBotonSi(){
-
+		this.I.click(locator.btnEliminarSi);
 	}
 
 	verificarProductoNoSeaEncontrado(){
