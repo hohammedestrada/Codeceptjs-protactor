@@ -32,8 +32,8 @@ Then('Cuando hago click en el botón "Sí, eliminar"', () => {
 	mModule.saveScreenshotWithMocha(__filename,ConstUtil.SE_MUESTRAN_ETIQUETAS_RESPECTIVAS);
 });
 
-Then('Se elimina de la lista el producto elegido', () => {
-	mModule.verificarProductoNoSeaEncontrado();
+Then('Se elimina de la lista el producto elegido {string}', (cuv) => {
+	mModule.verificarProductoNoSeaEncontrado(cuv);
 	mModule.saveScreenshotWithMocha(__filename,ConstUtil.SE_PRIORIZA_PRODUCTO_CON_TAG_APLICA_DESCUENTO_CON_BOTON_VER_DETALLE);
 });
 

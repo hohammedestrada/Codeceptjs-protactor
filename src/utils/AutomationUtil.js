@@ -2,6 +2,10 @@ const path = require('path');
 const fs = require('fs');
 const codeceptjs = require('codeceptjs');
 
+String.prototype.isEmpty = function() {
+    return (this.length === 0 || !this.trim());
+};
+
 class AutomationUtil {
 	constructor(){
 		this.wait = { retries: 3, minTimeout: 1000 };

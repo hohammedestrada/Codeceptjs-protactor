@@ -24,6 +24,12 @@ class BaseModule {
 		this.I.see = (element) => {
 			return this.I.retry().see(element);
 		}
+		this.I.seeElement = (element) => {
+			return this.I.retry().seeElement(element);
+		}
+		this.I.dontSeeElement = (element) => {
+			return this.I.retry().dontSeeElement(element);
+		}
 		this.saveScreenshotWithMocha = (baseName,fileName) => {
 			AutomationUtil.saveScreenshotWithMocha(baseName,fileName);
 		}

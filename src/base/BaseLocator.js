@@ -1,7 +1,13 @@
 const BaseElement = require('./BaseElement');
 
-class BaseLocator {
+const BaseModule = require('./BaseModule');
+
+const codeceptjs = require('codeceptjs');
+const Helper = codeceptjs.helper;
+
+class BaseLocator extends Helper {
 	constructor(){
+		super();
 		this.locateIndex = (type,index, attrs) => {
 			switch(type){
 			case BaseElement.Input:

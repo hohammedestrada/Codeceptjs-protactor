@@ -19,19 +19,19 @@ class RemoveProductsModule extends BaseModule.BaseModule {
 	}
 
 	verificarModal(){
-
+		this.I.waitForElement(locator.dialogRemoveItemCart);
 	}
 
 	verificarOpciones(){
-
+		this.waitForElements([locator.btnEliminarNo,locator.btnEliminarSi]);
 	}
 
 	clickBotonSi(){
 		this.I.click(locator.btnEliminarSi);
 	}
 
-	verificarProductoNoSeaEncontrado(){
-
+	verificarProductoNoSeaEncontrado(cuv){
+		this.I.dontSeeElement(locator.productCuv(cuv))
 	}
 
 	verificarCantidadProductosActual(){
