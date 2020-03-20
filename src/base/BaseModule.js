@@ -37,9 +37,11 @@ class BaseModule {
 			return this.I.retry().fillField(element,value);
 		}
 		this.I.grabTextFrom = async (element) => {
+			this.I.wait(0.5);
 			return await this.I.retry().grabTextFrom(element);
 		}
 		this.I.grabValueFrom = async (element) => {
+			this.I.wait(0.5);
 			return await this.I.retry().grabValueFrom(element);
 		}
 	}	

@@ -14,6 +14,7 @@
     "test:debug@addproducts/search": "codeceptjs run --grep @addproducts/search --debug --reporter mochawesome >./log/server.log",
     "test:debug@removeproducts": "codeceptjs run --grep @removeproducts --debug --reporter mochawesome >./log/server.log",
     "test:debug@modifyproducts": "codeceptjs run --grep @modifyproducts --debug --reporter mochawesome >./log/server.log",
+    "test:debug@sendorders": "codeceptjs run --grep @sendorders --debug --reporter mochawesome >./log/server.log",
     "test:debug:log": "codeceptjs run --grep @basic --debug >./log/server.log",
     "test:allure": "codeceptjs run --grep @basic --plugins allure >./log/server.log",
     "test:allure:debug": "codeceptjs run --grep @basic --debug -p allure >./log/server.log",

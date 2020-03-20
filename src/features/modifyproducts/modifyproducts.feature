@@ -16,5 +16,5 @@ Scenario Outline: Modificar pedido desde el carrito
 
 Examples:
   | country | user | password | cuv | cantidad |
-  | PE | 041702206 | 1 | 71289 | 100 |
+  | PE | 041702206 | 1 | 71289 | 1 |
   

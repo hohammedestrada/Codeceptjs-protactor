@@ -33,7 +33,7 @@ class ModifyProductsModule extends BaseModule.BaseModule {
 	obtenerPrecio(strPrecio){
 		return parseFloat(strPrecio.trim()
 		.replace(ConstUtil.STR_SOLES,ConstUtil.EMPTY)
-		.replace(ConstUtil.COMMA,ConstUtil.DOT)
+		.replace(ConstUtil.COMMA,ConstUtil.EMPTY)
 		.trim()).toFixed(ConstUtil.FIXED_PRICE);
 	}
 
@@ -61,7 +61,7 @@ class ModifyProductsModule extends BaseModule.BaseModule {
 		console.log('this.cantidadProductosCUVActual',this.cantidadProductosCUVActual);
 		
 		this.I.assertEqual(this.precioFinalActual,this.precioCuv*this.cantidadProductosCUVActual);
-	}	
+	}
 
 	async seActualizaCantidadProductosResumenPedido(){
 		let cantidadProductosActual = this.obtenerCantidadProductos(await this.I.grabTextFrom(locator.cantidadProductos));
