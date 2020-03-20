@@ -12,7 +12,7 @@ class ByCuvModule extends BaseModule.BaseModule {
 		this.waitForElements([locator.selectorCantidad])
 	}
 
-	agregarAlCarrito(cantidad){
+	agregarAlCarrito(cantidad = 0){
 		for(var i=0;i<cantidad;i++){
 			this.I.click(locator.selectorCantidad);
 		}

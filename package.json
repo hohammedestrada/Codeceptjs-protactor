@@ -13,6 +13,7 @@
     "test:debug@addproducts/fromcarousel": "codeceptjs run --grep @addproducts/fromcarousel --debug --reporter mochawesome >./log/server.log",
     "test:debug@addproducts/search": "codeceptjs run --grep @addproducts/search --debug --reporter mochawesome >./log/server.log",
     "test:debug@removeproducts": "codeceptjs run --grep @removeproducts --debug --reporter mochawesome >./log/server.log",
+    "test:debug@modifyproducts": "codeceptjs run --grep @modifyproducts --debug --reporter mochawesome >./log/server.log",
     "test:debug:log": "codeceptjs run --grep @basic --debug >./log/server.log",
     "test:allure": "codeceptjs run --grep @basic --plugins allure >./log/server.log",
     "test:allure:debug": "codeceptjs run --grep @basic --debug -p allure >./log/server.log",
@@ -33,6 +34,7 @@
   "license": "ISC",
   "dependencies": {
     "@wdio/selenium-standalone-service": "^5.16.10",
+    "codeceptjs-assert": "0.0.4",
     "mocha": "^6.2.2",
     "mochawesome": "^4.1.0",
     "protractor": "^5.4.2"

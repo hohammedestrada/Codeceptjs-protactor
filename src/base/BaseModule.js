@@ -33,6 +33,15 @@ class BaseModule {
 		this.saveScreenshotWithMocha = (baseName,fileName) => {
 			AutomationUtil.saveScreenshotWithMocha(baseName,fileName);
 		}
+		this.I.fillField = (element,value) => {
+			return this.I.retry().fillField(element,value);
+		}
+		this.I.grabTextFrom = async (element) => {
+			return await this.I.retry().grabTextFrom(element);
+		}
+		this.I.grabValueFrom = async (element) => {
+			return await this.I.retry().grabValueFrom(element);
+		}
 	}	
 }
 

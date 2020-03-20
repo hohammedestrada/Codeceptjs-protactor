@@ -2,9 +2,23 @@ const path = require('path');
 const fs = require('fs');
 const codeceptjs = require('codeceptjs');
 
-String.prototype.isEmpty = function() {
-    return (this.length === 0 || !this.trim());
-};
+if(!String.prototype.isEmpty){
+	String.prototype.isEmpty = function() {
+		return (this.length === 0 || !this.trim());
+	};
+}
+
+if (!String.prototype.format) {
+	String.prototype.format = function() {
+	  var args = arguments;
+	  return this.replace(/{(\d+)}/g, function(match, number) { 
+		return typeof args[number] != 'undefined'
+		  ? args[number]
+		  : match
+		;
+	  });
+	};
+  }
 
 class AutomationUtil {
 	constructor(){

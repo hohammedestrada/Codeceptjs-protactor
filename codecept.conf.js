@@ -21,6 +21,9 @@ exports.config = {
 		Mochawesome:{
 			uniqueScreenshotNames:true
 		},
+		AssertWrapper : {
+			require: 'codeceptjs-assert'
+		}
 	},
 	include: {},
 	mocha: {

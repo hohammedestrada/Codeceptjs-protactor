@@ -1,5 +1,21 @@
 class ConstUtil {
 	constructor(){
+		this.DOT = '.';
+		this.COMMA = ',';
+		this.FIXED_PRICE = 2;
+		this.EMPTY = '';
+		this.STR_SOLES = 'S/';
+		this.STR_PRODUCTOS = "productos";
+		this.SE_ACTUALIZA_GANANCIA_PEDIDO = 'Se actualiza la Ganancia del pedido';
+		this.SE_ACTUALIZA_MONTO_TOTAL_PEDIDO = 'Se actualiza el Monto Total del pedido';
+		this.SE_ACTUALIZA_CANTIDAD_PRODUCTOS_RESUMEN_PEDIDO = 'Se actualiza la cantidad de productos en el resumen del pedido';
+		this.DIGITO_UNA_CANTIDAD_DIGITOS_EN_SELECTOR_CANTIDAD = 'Digito una cantidad de {0} dígitos en el selector de cantidad Ej. {1} {2}';
+		this.LA_CANTIDAD_PRODUCTOS_CARRITO_ACTUALIZADA = 'La cantidad de productos en el carrito es actualizada';
+		this.SE_ELIMINA_LISTA_PRODUCTO_ELEGIDO = 'Se elimina de la lista el producto elegido {0}';
+		this.CUANDO_HAGO_CLICK_BOTON_SI_ELIMINAR = 'Cuando hago click en el botón Si, eliminar';
+		this.SE_DESPLIEGA_MODAL_CON_DOS_OPCIONES_SI_CANCELAR = 'Se despliega el modal de Estás seguro de eliminar este producto con dos opciones Si, eliminar y Cancelar';
+		this.ELIJO_ELIMINAR_PRODUCTO_PULSANDO_TACHITO = `Elijo eliminar un producto {0} pulsando el tachito`;
+		this.VISUALIZO_CANTIDAD_EXISTENTE_PRODUCTOS = 'visualizo una cantidad existente de productos';
 		this.CLICK_AGREGAR = 'Hago click en el boton Agregar';
 		this.SE_MUESTRA_MODAL_PRODUCTO_ANADIDO_CORRECTAMENTE = 'Se muestra el modal snack bar Producto añadido correctamente';
 		this.PRODUCTO_AGREGADO_CARRITO = 'El producto está agregado en el carrito';
