@@ -3,10 +3,11 @@ const LoginModule = require('../../modules/LoginModule');
 const LogoutModule = require('../../modules/LogoutModule');
 const ConstUtil = require('../../utils/ConstUtil');
 
-Given('Dado que me encuentro en el pedido {string}, {string} and {string} removeproducts.feature', (country, user, password) => {
+Given('Dado que me encuentro en el pedido {string}, {string} and {string} {string} removeproducts.feature', (country, user, password, cuv) => {
 	LoginModule.definedSteps(country, user, password);
 	LoginModule.clickButton();
 	LoginModule.loginSystem();
+	mModule.preCondition(cuv);
 	mModule.saveScreenshotWithMocha(__filename,ConstUtil.LOGIN_CORRECTO);
 });
 

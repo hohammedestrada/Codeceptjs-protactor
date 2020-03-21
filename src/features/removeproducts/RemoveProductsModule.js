@@ -1,12 +1,18 @@
 const BaseModule = require('../../base/BaseModule');
+const AddCartModule = require('../../modules/AddCartModule');
 const locator = require('./RemoveProductsLocator');
 
 class RemoveProductsModule extends BaseModule.BaseModule {
 	constructor(){
 		super();
+		this.preCondition = (cuv) => {
+			AddCartModule.buscarProducto(cuv);
+			AddCartModule.agregarAlCarrito();
+		}
 	}
 
 	clickIconCart(){
+		this.I.waitForElement(locator.iconCart);
 		this.I.click(locator.iconCart);
 	}
 
@@ -15,6 +21,7 @@ class RemoveProductsModule extends BaseModule.BaseModule {
 	}
 
 	eliminarProductoPulsandoElTachito(cuv) {
+		this.I.waitForElement(locator.tachito(cuv));
 		this.I.click(locator.tachito(cuv));
 	}
 

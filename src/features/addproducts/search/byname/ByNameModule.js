@@ -30,7 +30,7 @@ class ByNameModule extends BaseModule.BaseModule {
 	seVisualizaElBotonAgregarYSelectorCantidad(){
 		this.waitForElements(
 			[locator.btnAgregar,
-				locator.selectorCantidad,
+				locator.selectorCantidadByCuv,
 				locator.rdbCatalogo,
 				locator.rdbRevista
 			]);

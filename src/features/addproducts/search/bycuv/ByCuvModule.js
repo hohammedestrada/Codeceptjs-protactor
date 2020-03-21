@@ -1,4 +1,5 @@
 const BaseModule = require('../../../../base/BaseModule');
+const AddCartModule = require('../../../../modules/AddCartModule');
 const ConstUtil = require('../../../../utils/ConstUtil');
 const locator = require('./ByCuvLocator');
 
@@ -8,15 +9,11 @@ class ByCuvModule extends BaseModule.BaseModule {
 	}
 
 	buscarProducto(cuv){
-		this.I.fillField(locator.inputSearch,cuv);
-		this.waitForElements([locator.selectorCantidad])
+		AddCartModule.buscarProducto(cuv);
 	}
 
 	agregarAlCarrito(cantidad = 0){
-		for(var i=0;i<cantidad;i++){
-			this.I.click(locator.selectorCantidad);
-		}
-		this.I.click(locator.btnAgregar);
+		AddCartModule.agregarAlCarrito(cantidad);
 	}
 
 	seMuestraElmodalDeconfirmacion(){
