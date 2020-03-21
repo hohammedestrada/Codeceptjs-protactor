@@ -2,8 +2,8 @@ class ConstUtil {
 	constructor(){
 		this.PEDIDO_ENVIADO = 'El pedido se ha enviado';
 		this.PEDIDO_CONFIRMADO = 'El pedido es confirmado';
-		this.SE_DESPLIEGA_MODAL_ENVIAR_PEDIDO = 'Se despliega el modal informativo "Estás a punto de enviar tu pedido" con la información relacionada al pedido';
-		this.HAGO_CLICK_ENVIAR_PEDIDO = 'Hago click en el botón "Enviar pedido"';
+		this.SE_DESPLIEGA_MODAL_ENVIAR_PEDIDO = 'Se despliega el modal informativo Estás a punto de enviar tu pedido con la información relacionada al pedido';
+		this.HAGO_CLICK_ENVIAR_PEDIDO = 'Hago click en el botón Enviar pedido';
 		this.DOT = '.';
 		this.COMMA = ',';
 		this.FIXED_PRICE = 2;
