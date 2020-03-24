@@ -12,7 +12,6 @@ if(!String.prototype.obtenerPrecio){
 	};
 }
 
-
 if(!String.prototype.isEmpty){
 	String.prototype.isEmpty = function() {
 		return (this.length === 0 || !this.trim());
@@ -55,6 +54,11 @@ class AutomationUtil {
 		codeceptjs.actor().retry(this.wait).saveScreenshot(scenario+'-'+fileName + '.png');
 		codeceptjs.actor().addMochawesomeContext(scenario+'-'+fileName);
 		codeceptjs.actor().addMochawesomeContext(scenario+'-'+fileName + '.png');
+	}
+
+	parseFileSync(absoluteFilePath){
+		let dataJson = fs.readFileSync(absoluteFilePath, 'utf8');
+		return JSON.parse(dataJson);
 	}
 }
 

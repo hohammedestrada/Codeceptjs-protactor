@@ -1,14 +1,11 @@
 class BaseType {
-
 	constructor(){
 		this.Submit = 'submit';
 		this.Button = 'button';
 	}
-    
 }
 
 class BaseElement {
-
 	constructor(){
 		this.Button = 'button';
 		this.Input = 'input';
@@ -16,7 +13,6 @@ class BaseElement {
 
 		this.BaseType = new BaseType();
 	}
-    
 }
 
 module.exports = new BaseElement();

@@ -1,11 +1,23 @@
 const AutomationUtil = require('./src/utils/AutomationUtil');
 let steps = AutomationUtil.fnGetFiles('./src/features', '.steps.js');
+const { setSharedCookies } = require('@codeceptjs/configure');
+
+setSharedCookies();
+
+let config = AutomationUtil.parseFileSync('sb3.config.json');
 
 exports.config = {
 	output: 'report',
 	helpers: {
+		REST: {
+			defaultHeaders: {
+				/* 'Auth': '11111', */
+				'Content-Type': 'application/json',
+				'Accept': 'application/json',
+			  },
+		},
 		Protractor: {
-			url: 'http://sb2qa.somosbelcorp.com/',
+			url: config.host,
 			driver: 'hosted',
 			browser: 'chrome',
 			//show: false,
@@ -29,8 +41,8 @@ exports.config = {
 	mocha: {
 		reporterOptions: {
 			reportDir: './report/',
-			reportFilename: 'SomosBelcorp3.0',
-			reportTitle: 'Somos Belcorp 3.0',
+			reportFilename: config.name,
+			reportTitle: config.reportTitle,
 			autoOpen:true,
 			ts:'',
 		}
@@ -74,5 +86,5 @@ exports.config = {
 	},
 	tests: './tests/*.spec.js',
 	timeout: 10000,
-	name: 'SomosBelcorp3.0'
-};
+	name: config.name
+}

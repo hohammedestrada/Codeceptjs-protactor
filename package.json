@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "initApiRest":"node app/index.js",
     "codeceptjs": "codeceptjs init",
     "codeceptjs:gherkin": "codeceptjs gherkin:init",
     "test": "codeceptjs run --grep @basic --reporter mochawesome >./log/server.log",
@@ -35,7 +36,9 @@
   "license": "ISC",
   "dependencies": {
     "@wdio/selenium-standalone-service": "^5.16.10",
+    "body-parser": "^1.19.0",
     "codeceptjs-assert": "0.0.4",
+    "express": "^4.17.1",
     "mocha": "^6.2.2",
     "mochawesome": "^4.1.0",
     "protractor": "^5.4.2"

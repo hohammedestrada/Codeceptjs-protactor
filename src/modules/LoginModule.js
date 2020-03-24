@@ -6,7 +6,7 @@ class LoginModule extends BaseModule.BaseModule {
 		super();
 	}
  
-	definedSteps(country, user, password) {
+	async definedSteps(country, user, password) {
 		this.I.amOnPage('/');
 		this.I.waitForElement(locator.selectCountry);
   		this.I.selectOption(locator.selectCountry,country);
