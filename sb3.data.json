@@ -4,7 +4,26 @@
         "user": "041702206",
         "password": "1"
     },
-    "modifyproducts": {
-        
+    "addproducts": {
+        "search":{
+            "bycuv" : {
+                "cuv" : "71289",
+                "cantidad": 5
+            },
+            "byname" : {
+                "producto" : "perfume",
+                "posicion" : 3
+            }
+        }
+    },
+    "modifyproducts" : {
+        "cuv" :  "71289",
+        "cantidad": 15 
+    },
+    "removeproducts": {
+        "cuv" :  "71289"
+    },
+    "sendorders" : {
+        "cuv" :  "71289"
     }
 }

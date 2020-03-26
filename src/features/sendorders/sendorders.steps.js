@@ -2,12 +2,16 @@ const mModule = require('./SendOrdersModule');
 const LoginModule = require('../../modules/LoginModule');
 const LogoutModule = require('../../modules/LogoutModule');
 const ConstUtil = require('../../utils/ConstUtil');
+const dataStep = require('../../modules/data.steps');
 
-Given('Dado que me encuentro en el pedido {string}, {string} and {string} {string} sendorders.feature', (country, user, password, cuv) => {
-	LoginModule.definedSteps(country, user, password);
+let state = {};
+dataStep.givenDataTest(state,__filename);
+
+Given('Dado que me encuentro en el pedido "<country>", "<user>" and "<password>" "<cuv>" sendorders.feature', () => {
+	LoginModule.definedSteps(state.login.country, state.login.user, state.login.password);
 	LoginModule.clickButton();
 	LoginModule.loginSystem();
-	mModule.preCondition(cuv);
+	mModule.preCondition(state.sendorders.cuv);
 	mModule.saveScreenshotWithMocha(__filename,ConstUtil.LOGIN_CORRECTO);
 });
 

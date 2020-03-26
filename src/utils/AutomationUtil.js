@@ -28,7 +28,13 @@ if (!String.prototype.format) {
 		;
 	  });
 	};
-  }
+}
+
+if (!String.prototype.formatFeatureJs) {
+	String.prototype.formatFeatureJs = function() {
+	  return this.trim().replace('.steps.js','.feature');
+	};
+}
 
 class AutomationUtil {
 	constructor(){

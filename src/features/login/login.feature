@@ -4,8 +4,8 @@ Feature: Doing Login
   As a persona
   I want to be able to log in system
 
- Background:
-    Given I have test data
+  Background:
+    Given I have data test
 
 Scenario: Doing Login
   Given I select my "<country>" and put my "<user>" and my "<password>"

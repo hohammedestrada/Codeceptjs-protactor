@@ -10,6 +10,7 @@ exports.config = {
 	output: 'report',
 	helpers: {
 		REST: {
+			timeout: 100000,
 			defaultHeaders: {
 				/* 'Auth': '11111', */
 				'Content-Type': 'application/json',

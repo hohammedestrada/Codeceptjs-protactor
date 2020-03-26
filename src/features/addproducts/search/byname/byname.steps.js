@@ -2,16 +2,20 @@ const mModule = require('./ByNameModule');
 const LoginModule = require('../../../../modules/LoginModule');
 const LogoutModule = require('../../../../modules/LogoutModule');
 const ConstUtil = require('../../../../utils/ConstUtil');
+const dataStep = require('../../../../modules/data.steps');
 
-Given('Me encuentro en el buscador del home {string}, {string} and {string} byname.feature', (country, user, password) => {
-	LoginModule.definedSteps(country, user, password);
+let state = {};
+dataStep.givenDataTest(state,__filename);
+
+Given('Me encuentro en el buscador del home "<country>", "<user>" and "<password>" byname.feature', () => {
+	LoginModule.definedSteps(state.login.country,state.login.user,state.login.password);
 	LoginModule.clickButton();
 	LoginModule.loginSystem();
 	mModule.saveScreenshotWithMocha(__filename,ConstUtil.LOGIN_CORRECTO);
 });
 
-Given('Digito un producto que se encuentra en ambos medios Ej. {string}', (producto) => {
-	mModule.buscarProducto(producto);
+Given('Digito un producto que se encuentra en ambos medios Ej. "<producto>"', () => {
+	mModule.buscarProducto(state.addproducts.search.byname.producto);
 	mModule.saveScreenshotWithMocha(__filename,ConstUtil.DIGITO_UN_PRODUCTO_SE_ENCUENTRA_EN_AMBOS_MEDIOS);
 });
 
@@ -24,14 +28,14 @@ Then('Se visualizan los productos coincidentes de ambos medios', () => {
 	mModule.saveScreenshotWithMocha(__filename,ConstUtil.SE_VISUALIZAN_PRODUCTOS_COINCIDENTES_AMBOS_MEDIOS);
 });
 
-Then('Se muestran las etiquetas respectivas {int}', (posicion) => {
-	mModule.seVisualizanEtiquetasRespectivas(posicion);
+Then('Se muestran las etiquetas respectivas <posicion>', () => {
+	mModule.seVisualizanEtiquetasRespectivas(state.addproducts.search.byname.posicion);
 	mModule.saveScreenshotWithMocha(__filename,ConstUtil.SE_MUESTRAN_ETIQUETAS_RESPECTIVAS);
 });
 
-Then('Se prioriza producto de catálogo con el tag "Aplica descuento" con el botón "Ver detalle" {int}', (posicion) => {
-	mModule.seVisualizanAplicaDescuentoVerDetalle(posicion);
-	mModule.clickVerDetalle(posicion);
+Then('Se prioriza producto de catálogo con el tag "Aplica descuento" con el botón "Ver detalle" <posicion>', () => {
+	mModule.seVisualizanAplicaDescuentoVerDetalle(state.addproducts.search.byname.posicion);
+	mModule.clickVerDetalle(state.addproducts.search.byname.posicion);
 	mModule.saveScreenshotWithMocha(__filename,ConstUtil.SE_PRIORIZA_PRODUCTO_CON_TAG_APLICA_DESCUENTO_CON_BOTON_VER_DETALLE);
 });
 

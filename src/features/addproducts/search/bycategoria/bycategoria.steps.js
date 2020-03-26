@@ -2,9 +2,13 @@ const mModule = require('./ByCategoriaModule');
 const LoginModule = require('../../../../modules/LoginModule');
 const LogoutModule = require('../../../../modules/LogoutModule');
 const ConstUtil = require('../../../../utils/ConstUtil');
+const dataStep = require('../../../../modules/data.steps');
 
-Given('I logged in with params {string}, {string} and {string}', (country, user, password) => {
-	LoginModule.definedSteps(country, user, password);
+let state = {};
+dataStep.givenDataTest(state,__filename);
+
+Given('I logged in with params "<country>", "<user>" and "<password>" bycategoria.feature', () => {
+	LoginModule.definedSteps(state.login.country, state.login.user, state.login.password);
 	LoginModule.clickButton();
 	LoginModule.loginSystem();
 	mModule.saveScreenshotWithMocha(__filename,ConstUtil.LOGIN_CORRECTO);

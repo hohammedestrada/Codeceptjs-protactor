@@ -2,12 +2,16 @@ const mModule = require('./RemoveProductsModule');
 const LoginModule = require('../../modules/LoginModule');
 const LogoutModule = require('../../modules/LogoutModule');
 const ConstUtil = require('../../utils/ConstUtil');
+const dataStep = require('../../modules/data.steps');
 
-Given('Dado que me encuentro en el pedido {string}, {string} and {string} {string} removeproducts.feature', (country, user, password, cuv) => {
-	LoginModule.definedSteps(country, user, password);
+let state = {};
+dataStep.givenDataTest(state,__filename);
+
+Given('Dado que me encuentro en el pedido "<country>", "<user>" and "<password>" "<cuv>" removeproducts.feature', () => {
+	LoginModule.definedSteps(state.login.country, state.login.user, state.login.password);
 	LoginModule.clickButton();
 	LoginModule.loginSystem();
-	mModule.preCondition(cuv);
+	mModule.preCondition(state.removeproducts.cuv);
 	mModule.saveScreenshotWithMocha(__filename,ConstUtil.LOGIN_CORRECTO);
 });
 
@@ -16,10 +20,10 @@ Given('Visualizo una cantidad existente de productos', () => {
 	mModule.saveScreenshotWithMocha(__filename,ConstUtil.VISUALIZO_CANTIDAD_EXISTENTE_PRODUCTOS);
 });
 
-When('Elijo eliminar un producto {string} pulsando el tachito', (cuv) => {
-	mModule.verificarCantidadProductosInicial(cuv);
-	mModule.eliminarProductoPulsandoElTachito(cuv);
-	mModule.saveScreenshotWithMocha(__filename,ConstUtil.ELIJO_ELIMINAR_PRODUCTO_PULSANDO_TACHITO.format(cuv));
+When('Elijo eliminar un producto "<cuv>" pulsando el tachito', () => {
+	mModule.verificarCantidadProductosInicial(state.removeproducts.cuv);
+	mModule.eliminarProductoPulsandoElTachito(state.removeproducts.cuv);
+	mModule.saveScreenshotWithMocha(__filename,ConstUtil.ELIJO_ELIMINAR_PRODUCTO_PULSANDO_TACHITO.format(state.removeproducts.cuv));
 });
 
 Then('Se despliega el modal de "¿Estás seguro de eliminar este producto?" con dos opciones "Sí, eliminar" y "Cancelar"', () => {
@@ -33,9 +37,9 @@ Then('Cuando hago click en el botón "Sí, eliminar"', () => {
 	mModule.saveScreenshotWithMocha(__filename,ConstUtil.CUANDO_HAGO_CLICK_BOTON_SI_ELIMINAR);
 });
 
-Then('Se elimina de la lista el producto elegido {string}', (cuv) => {
-	mModule.verificarProductoNoSeaEncontrado(cuv);
-	mModule.saveScreenshotWithMocha(__filename,ConstUtil.SE_ELIMINA_LISTA_PRODUCTO_ELEGIDO.format(cuv));
+Then('Se elimina de la lista el producto elegido "<cuv>"', () => {
+	mModule.verificarProductoNoSeaEncontrado(state.removeproducts.cuv);
+	mModule.saveScreenshotWithMocha(__filename,ConstUtil.SE_ELIMINA_LISTA_PRODUCTO_ELEGIDO.format(state.removeproducts.cuv));
 });
 
 Then('La cantidad de productos en el carrito es actualizada', () => {

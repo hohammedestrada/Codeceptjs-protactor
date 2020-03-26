@@ -4,7 +4,10 @@ Feature: Eliminar pedido desde el carrito
   As a persona
   I quiero permitir eliminar un producto de la lista
 
-Scenario Outline: Eliminar pedido desde el carrito
+  Background:
+    Given I have data test removeproducts.feature
+
+Scenario: Eliminar pedido desde el carrito
   Given Dado que me encuentro en el pedido "<country>", "<user>" and "<password>" "<cuv>" removeproducts.feature
   Given Visualizo una cantidad existente de productos
   When Elijo eliminar un producto "<cuv>" pulsando el tachito
@@ -13,8 +16,4 @@ Scenario Outline: Eliminar pedido desde el carrito
   Then Se elimina de la lista el producto elegido "<cuv>"
   And La cantidad de productos en el carrito es actualizada
   And I logout on system removeproducts.feature
-
-Examples:
-  | country | user | password | cuv |
-  | PE | 041702206 | 1 | 71289 |
   
