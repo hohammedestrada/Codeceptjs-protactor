@@ -22,6 +22,7 @@ exports.config = {
 			driver: 'hosted',
 			browser: 'chrome',
 			//show: false,
+			restart: false,
 			capabilities: {
 				chromeOptions: {
 					// args: [ '--headless', '--disable-gpu', '--no-sandbox' ]
@@ -51,10 +52,10 @@ exports.config = {
 	bootstrap: null,
 	teardown: null,
 	hooks: [],
-	gherkin: {
-		features: './src//features/**/*.feature',
-		steps: [...steps]
-	},
+	//gherkin: {
+	//	features: './src//features/**/*.feature',
+	//	steps: [...steps]
+	//},
 	plugins: {
 		allure: {},
 		screenshotOnFail: {
@@ -85,7 +86,7 @@ exports.config = {
 			]
 		}
 	},
-	tests: './tests/*.spec.js',
+	tests: './src//features/**/*.spec.js',
 	timeout: 10000,
 	name: config.name
 }

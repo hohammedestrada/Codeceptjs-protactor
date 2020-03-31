@@ -6,7 +6,7 @@ class LoginModule extends BaseModule.BaseModule {
 		super();
 	}
  
-	async definedSteps(country, user, password) {
+	definedSteps(country, user, password) {
 		this.I.amOnPage('/');
 		this.I.waitForElement(locator.selectCountry);
   		this.I.selectOption(locator.selectCountry,country);
@@ -16,11 +16,11 @@ class LoginModule extends BaseModule.BaseModule {
 
 	clickButton() {
 		this.I.click(locator.btnLogin);
+		this.I.waitForElement(locator.waitingElement);
 	}
 
 	loginSystem() {
-		this.I.waitForElement(locator.waitingElement);
-		this.I.waitForElement(locator.inicioLink);
+		this.waitForElements([locator.inicioLink,locator.iconCart]);
 	}
 
 }

@@ -33,6 +33,10 @@ class BaseModule {
 		this.saveScreenshotWithMocha = (baseName,fileName) => {
 			AutomationUtil.saveScreenshotWithMocha(baseName,fileName);
 		}
+		this.Scenario = (name, fun) => {
+			this.I.addMochawesomeContext(name);
+			fun();
+		}
 		this.I.fillField = (element,value) => {
 			return this.I.retry().fillField(element,value);
 		}

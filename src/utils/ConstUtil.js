@@ -36,7 +36,7 @@ class ConstUtil {
 		this.HAGO_CLICK_SECCION_FRAGANCIAS = 'hago click en seccion fragancias';
 		this.HAGO_CLICK_SECCION_CATEGORIAS = 'hago click en seccion categorias';
 		this.MENU_LATERAL_CATEGORIAS = 'menu lateral categorias';
-		this.ESPERANDO = 'esperando';
+		this.ESPERANDO_LOGIN = 'esperando login';
 		this.CAMPOS_LLENADOS_CORRECTOS = 'campos llenados correctos';
 		this.PRODUCTO_ANADIDO_CORRECTAMENTE = 'Producto añadido correctamente';
 		this.CONFIRMACION_DE_PRODUCTO_ANADIDO = 'Confirmación de producto añadido';

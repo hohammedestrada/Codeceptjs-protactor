@@ -1,9 +1,22 @@
 {
-    "login": {
-        "country": "PE",
-        "user": "041702206",
-        "password": "1"
-    },
+    "login": 
+        {
+            "country": "PE",
+            "user": "041702206",
+            "password": "1"
+        },
+    "logins": [
+        {
+            "country": "PE",
+            "user": "041702206",
+            "password": "1"
+        },
+        {
+            "country": "PE",
+            "user": "041702206",
+            "password": "1"
+        }
+    ],
     "addproducts": {
         "search":{
             "bycuv" : {

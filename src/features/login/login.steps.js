@@ -13,7 +13,7 @@ Given('I select my "<country>" and put my "<user>" and my "<password>"',() => {
 
 When('I click on ingresar a tu cuenta', () => {
 	mModule.clickButton();
-	mModule.saveScreenshotWithMocha(__filename,ConstUtil.ESPERANDO);
+	mModule.saveScreenshotWithMocha(__filename,ConstUtil.ESPERANDO_LOGIN);
 });
 
 Then('I login on system', () => {
