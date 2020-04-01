@@ -52,10 +52,10 @@ exports.config = {
 	bootstrap: null,
 	teardown: null,
 	hooks: [],
-	//gherkin: {
-	//	features: './src/features/**/*.feature',
-	//	steps: [...steps]
-	//},
+	gherkin: {
+		features: './src/features/**/*.feature',
+		steps: [...steps]
+	},
 	plugins: {
 		allure: {},
 		screenshotOnFail: {
@@ -86,7 +86,7 @@ exports.config = {
 			]
 		}
 	},
-	tests: './src/features/**/*.specs.js',
+	//tests: './src/features/**/*.specs.js',
 	timeout: 10000,
 	name: config.name
 }
