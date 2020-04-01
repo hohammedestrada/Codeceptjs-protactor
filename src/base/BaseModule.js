@@ -37,6 +37,18 @@ class BaseModule {
 			this.I.addMochawesomeContext(name);
 			fun();
 		}
+		this.Given = (name, fun) => {
+			this.Scenario(ConstUtil.GIVEN+' '+name,fun);
+		}
+		this.And = (name, fun) => {
+			this.Scenario(ConstUtil.AND+' '+name,fun);
+		}
+		this.When = (name, fun) => {
+			this.Scenario(ConstUtil.WHEN+' '+name,fun);
+		}
+		this.Then = (name, fun) => {
+			this.Scenario(ConstUtil.THEN+' '+name,fun);
+		}
 		this.I.fillField = (element,value) => {
 			return this.I.retry().fillField(element,value);
 		}

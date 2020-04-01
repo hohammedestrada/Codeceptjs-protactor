@@ -7,7 +7,7 @@ Feature: Agregar item a carrito desde carrusel de revista
   Background:
     Given I have data test revista.feature
 
-Scenario: Add products from carousel
+Scenario: Agregar item a carrito desde carrusel de revista
   Given I logged in with params "<country>", "<user>" and "<password>" revista.feature
   When  I click on agregar button del carousel de revista
   Then  I see add product confirmation

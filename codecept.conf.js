@@ -53,7 +53,7 @@ exports.config = {
 	teardown: null,
 	hooks: [],
 	//gherkin: {
-	//	features: './src//features/**/*.feature',
+	//	features: './src/features/**/*.feature',
 	//	steps: [...steps]
 	//},
 	plugins: {
@@ -86,7 +86,7 @@ exports.config = {
 			]
 		}
 	},
-	tests: './src//features/**/*.spec.js',
+	tests: './src/features/**/*.specs.js',
 	timeout: 10000,
 	name: config.name
 }

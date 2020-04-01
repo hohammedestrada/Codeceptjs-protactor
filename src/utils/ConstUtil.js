@@ -1,5 +1,9 @@
 class ConstUtil {
 	constructor(){
+		this.AND = 'AND';
+		this.GIVEN = 'GIVEN';
+		this.WHEN = 'WHEN';
+		this.THEN = 'THEN';
 		this.PEDIDO_ENVIADO = 'El pedido se ha enviado';
 		this.PEDIDO_CONFIRMADO = 'El pedido es confirmado';
 		this.SE_DESPLIEGA_MODAL_ENVIAR_PEDIDO = 'Se despliega el modal informativo Estás a punto de enviar tu pedido con la información relacionada al pedido';
