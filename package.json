@@ -9,6 +9,7 @@
     "codeceptjs:gherkin": "codeceptjs gherkin:init",
     "test": "codeceptjs run --grep @basic --reporter mochawesome >./log/server.log",
     "test:debug": "codeceptjs run --grep @basic --debug",
+    "test:steps": "codeceptjs run --steps --reporter mochawesome >./log/server.log",
     "test:debug@login": "codeceptjs run --grep @login --debug --reporter mochawesome >./log/server.log",
     "test:debug@addproducts": "codeceptjs run --grep @addproducts --debug --reporter mochawesome >./log/server.log",
     "test:debug@addproducts/fromcarousel": "codeceptjs run --grep @addproducts/fromcarousel --debug --reporter mochawesome >./log/server.log",
