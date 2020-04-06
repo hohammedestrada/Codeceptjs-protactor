@@ -2,7 +2,7 @@ const ConstUtil = require('../../../../utils/ConstUtil');
 const mModule = require('./CatalogoModule');
 const logInModule = require('../../../../modules/LoginModule');
 const logoutModule = require('../../../../modules/LogoutModule');
-const dataStep = require('../../../../modules/data.specs');
+const dataStep = require('../../../../modules/data.tests');
 
 let state = {};
 dataStep.setFeature('@addproducts/fromcarousel');

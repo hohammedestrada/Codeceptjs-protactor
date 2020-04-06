@@ -86,7 +86,7 @@ exports.config = {
 			]
 		}
 	},
-	tests: './src/features/**/*.specs.js',
+	tests: './src/features/**/*.tests.js',
 	timeout: 10000,
 	name: config.name
 }

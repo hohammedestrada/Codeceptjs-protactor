@@ -1,7 +1,7 @@
 const ConstUtil = require('../../utils/ConstUtil');
 const mModule = require('../../modules/LoginModule');
 const logoutModule = require('../../modules/LogoutModule');
-const dataStep = require('../../modules/data.specs.js');
+const dataStep = require('../../modules/data.tests.js');
 
 let state = {};
 dataStep.setFeature('@login');

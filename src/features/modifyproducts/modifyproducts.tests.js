@@ -2,7 +2,7 @@ const mModule = require('./ModifyProductsModule');
 const LoginModule = require('../../modules/LoginModule');
 const LogoutModule = require('../../modules/LogoutModule');
 const ConstUtil = require('../../utils/ConstUtil');
-const dataStep = require('../../modules/data.specs');
+const dataStep = require('../../modules/data.tests');
 
 let state = {};
 dataStep.setFeature('@modifyproducts');
