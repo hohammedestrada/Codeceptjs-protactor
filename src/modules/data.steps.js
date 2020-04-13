@@ -12,8 +12,9 @@ module.exports = {
         console.log("givenText",givenText);
         Given(givenText, async () => {
             /*Usando archivo fisico*/
-            //state.data = AutomationUtil.parseFileSync('sb3.data.json').login;
-        
+            //let data = AutomationUtil.parseFileSync('sb3.data.json');
+            //Object.assign(state,data);
+
             /*Usando api rest, para que funcione el ejemplo ejecutar el script initApiRest del package.json*/
             //I.haveRequestHeaders({auth: "${token}"});
             let request = await I.sendGetRequest(config.urlData);
