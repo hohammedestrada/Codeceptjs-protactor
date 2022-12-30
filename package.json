@@ -28,8 +28,8 @@
   "license": "ISC",
   "dependencies": {
     "@wdio/selenium-standalone-service": "^5.16.10",
-    "codeceptjs": "^2.3.6",
-    "mocha": "^6.2.2",
+    "codeceptjs": "^3.0.0",
+    "mocha": "^10.2.0",
     "mochawesome": "^4.1.0",
     "protractor": "^5.4.2"
   },
